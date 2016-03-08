@@ -5,6 +5,5 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-Group::Root.seed_once(:parent_id,
-                      name: 'Hauptgruppe'
-                     )
+Group::Dachverband.seed_once(:parent_id,
+                             name: 'Dachverband')

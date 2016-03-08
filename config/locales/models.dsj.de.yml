@@ -48,7 +48,7 @@ de:
       group/easyvote_community:
         one: Community
         other: Communities
-      group/easyvote_kontakte:
+      group/easyvote_externe_kontakte:
         one: Externe Kontakte
         other: Externe Kontakte
 
@@ -60,7 +60,7 @@ de:
         one: Mitarbeiter/-in
       group/dachverband_vorstand/vorstandsmitglied:
         one: Vorstandsmitglied
-      group/dachverband_externe_kontakte/addressverwaltung:
+      group/dachverband_externe_kontakte/adressverwaltung:
         one: Adressverwaltung
       group/dachverband_externe_kontakte/kontakt:
         one: Kontakt

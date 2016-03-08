@@ -10,9 +10,11 @@ require Rails.root.join('db', 'seeds', 'support', 'person_seeder')
 class DsjPersonSeeder < PersonSeeder
 
   def amount(role_type)
-    case role_type.name.demodulize
-    when 'Member' then 5
-    else 1
+    mass_role = %w(Kontakt Mitglied Abonnent Communitymitglied)
+    if mass_role.include?(role_type.name.demodulize)
+      5
+    else
+      1
     end
   end
 
@@ -26,7 +28,11 @@ puzzlers = ['Pascal Zumkehr',
             'Pascal Simon',
             'Roland Studer']
 
-devs = {'Customer Name' => 'customer@email.com'}
+devs = {
+  'Maurus Blumenthal' => 'maurus.blumenthal@dsj.ch',
+  'Jochanan Harari' => 'jochanan.harari@dsj.ch',
+  'Severin Marty' => 'severin.marty@dsj.ch'
+}
 puzzlers.each do |puz|
   devs[puz] = "#{puz.split.last.downcase}@puzzle.ch"
 end
@@ -37,5 +43,5 @@ seeder.seed_all_roles
 
 root = Group.root
 devs.each do |name, email|
-  seeder.seed_developer(name, email, root, Group::Root::Leader)
+  seeder.seed_developer(name, email, root, Group::DachverbandGeschaeftsstelle::Mitarbeiter)
 end
