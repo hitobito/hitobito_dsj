@@ -5,11 +5,11 @@
 
 top_event:
   name: Top Event
-  groups: root
+  groups: dachverband
 
 top_course:
   name: Top Course
-  groups: root
+  groups: dachverband
   type: Event::Course
   kind: dummy
   priorization: true

@@ -9,17 +9,17 @@ admin:
   email: admin@hitobito.example.comt
   gender: m
   contact_data_visible: true
-  primary_group: root
+  primary_group: dachverband_gs
 
 leader:
   first_name: A
   last_name: Leader
   email: a.leader@hitobito.example.com
   contact_data_visible: true
-  primary_group: root
+  primary_group: dachverband
 
 member:
   first_name: My
   last_name: Member
   email: member0@hitobito.example.com
-  primary_group: root
+  primary_group: dachverband_gremium

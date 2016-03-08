@@ -5,17 +5,15 @@
 
 admin:
   person: admin
-  group: root
-  type: Group::Root::Leader
+  group: dachverband_gs
+  type: Group::DachverbandGeschaeftsstelle::Mitarbeiter
 
-# TODO use group and type of the main base leader
 leader:
   person: leader
-  group: root
-  type: Group::Root::Leader
+  group: dachverband
+  type: Group::Dachverband::Adressverwaltung
 
-# TODO use group and type of the main base member
 member:
   person: member
-  group: root
-  type: Group::Root::Member
+  group: dachverband_gremium
+  type: Group::DachverbandGremium::Mitglied
