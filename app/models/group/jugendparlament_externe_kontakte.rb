@@ -5,15 +5,18 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-module Dsj::Group
-  extend ActiveSupport::Concern
+class Group::JugendparlamentExterneKontakte < Group
 
-  included do
-    # Define additional used attributes
-    # self.used_attributes += [:website, :bank_account, :description]
-    # self.superior_attributes = [:bank_account]
+  children Group::JugendparlamentExterneKontakte
 
-    root_types Group::Dachverband
+  ### ROLES
+
+  class Adressverwaltung < ::Role
+    self.permissions = [:group_full]
   end
+
+  class Kontakt < ::Role; end
+
+  roles Adressverwaltung, Kontakt
 
 end

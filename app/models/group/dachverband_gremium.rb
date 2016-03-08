@@ -5,25 +5,20 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-# TODO: rename class to specific name and change all references
-class Group::Root < ::Group
+class Group::DachverbandGremium < ::Group
 
-  self.layer = true
-
-  # TODO: define actual child group types
-  children Group::Root
+  children Group::DachverbandGremium
 
   ### ROLES
 
-  # TODO: define actual role types
-  class Leader < ::Role
-    self.permissions = [:layer_and_below_full, :admin]
+  class Leitung < ::Role
+    self.permissions = [:group_full, :contact_data]
   end
 
-  class Member < ::Role
+  class Mitglied < ::Role
     self.permissions = [:group_read]
   end
 
-  roles Leader, Member
+  roles Leitung, Mitglied
 
 end

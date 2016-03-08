@@ -9,16 +9,94 @@ de:
 
       ### GROUPS
 
-      group/root:
-        one: Hauptgruppe
-        other: Hauptgruppen
-
+      group/dachverband:
+        one: Dachverband
+        other: Dachverbände
+      group/dachverband_geschaeftsstelle:
+        one: Geschäftsstelle
+        other: Geschäftsstellen
+      group/dachverband_vorstand:
+        one: Vorstand
+        other: Vorstände
+      group/dachverband_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
+      group/dachverband_gremium:
+        one: Gremium
+        other: Gremien
+      group/jugendparlament:
+        one: Jugendparlament
+        other: Jugendparlamente
+      group/jugendparlament_leitung:
+        one: Leitung
+        other: Leitungen
+      group/jugendparlament_vorstand:
+        one: Vorstand
+        other: Vorstände
+      group/jugendparlament_mitglieder:
+        one: Mitglieder
+        other: Mitglieder
+      group/jugendparlament_externe_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
+      group/easyvote:
+        one: Easyvote
+        other: Easyvote
+      group/easyvote_abonnenten:
+        one: Abonnenten
+        other: Abonnenten
+      group/easyvote_community:
+        one: Community
+        other: Communities
+      group/easyvote_kontakte:
+        one: Externe Kontakte
+        other: Externe Kontakte
 
       ### ROLES
 
-      group/root/leader:
+      group/dachverband/adressverwaltung:
+        one: Adressverwaltung
+      group/dachverband_geschaeftsstelle/mitarbeiter:
+        one: Mitarbeiter/-in
+      group/dachverband_vorstand/vorstandsmitglied:
+        one: Vorstandsmitglied
+      group/dachverband_externe_kontakte/addressverwaltung:
+        one: Adressverwaltung
+      group/dachverband_externe_kontakte/kontakt:
+        one: Kontakt
+      group/dachverband_gremium/leitung:
         one: Leitung
-        description: Leitungspersonen verwalten die Applikation.
-      group/root/member:
+      group/dachverband_gremium/mitglied:
         one: Mitglied
-        description: Mitglieder sind alle anderen.
+      group/jugendparlament/adressverwaltung:
+        one: Adressverwaltung
+      group/jugendparlament_leitung/praesidium:
+        one: Präsidium
+      group/jugendparlament_leitung/co_praesidium:
+        one: Co-Präsidium
+      group/jugendparlament_leitung/adressverwaltung:
+        one: Adressverwaltung
+      group/jugendparlament_vorstand/vorstandsmitglied:
+        one: Vorstandsmitglied
+      group/jugendparlament_mitglieder/adressverwaltung:
+        one: Adressverwaltung
+      group/jugendparlament_mitglieder/mitglied:
+        one: Mitglied
+      group/jugendparlament_externe_kontakte/adressverwaltung:
+        one: Adressverwaltung
+      group/jugendparlament_externe_kontakte/kontakt:
+        one: Kontakt
+      group/easyvote/adressverwaltung:
+        one: Adressverwaltung
+      group/easyvote_abonnenten/adressverwaltung:
+        one: Adressverwaltung
+      group/easyvote_abonnenten/abonnent:
+        one: Abonnent/-in
+      group/easyvote_community/adressverwaltung:
+        one: Adressverwaltung
+      group/easyvote_community/communitymitglied:
+        one: Communitymitglied
+      group/easyvote_externe_kontakte/adressverwaltung:
+        one: Adressverwaltung
+      group/easyvote_externe_kontakte/kontakt:
+        one: Kontakt
