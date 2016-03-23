@@ -24,6 +24,9 @@ de:
       group/dachverband_gremium:
         one: Gremium
         other: Gremien
+      group/jugendparlament_status:
+        one: JUPA Status
+        other: JUPA Status
       group/jugendparlament:
         one: Jugendparlament
         other: Jugendparlamente

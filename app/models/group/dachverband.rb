@@ -14,6 +14,7 @@ class Group::Dachverband < Group
            Group::DachverbandVorstand,
            Group::DachverbandExterneKontakte,
            Group::DachverbandGremium,
+           Group::JugendparlamentStatus,
            Group::Jugendparlament,
            Group::Easyvote
 
