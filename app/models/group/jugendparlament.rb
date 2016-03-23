@@ -22,6 +22,10 @@ class Group::Jugendparlament < Group
     self.permissions = [:layer_full]
   end
 
-  roles Adressverwaltung
+  class Rechnungsadresse < ::Role; end
+
+  class Lieferadresse < ::Role; end
+
+  roles Adressverwaltung, Rechnungsadresse, Lieferadresse
 
 end

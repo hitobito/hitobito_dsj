@@ -70,6 +70,10 @@ de:
         one: Mitglied
       group/jugendparlament/adressverwaltung:
         one: Adressverwaltung
+      group/jugendparlament/rechnungsadresse:
+        one: Rechnungsadresse
+      group/jugendparlament/lieferadresse:
+        one: Lieferadresse
       group/jugendparlament_leitung/praesidium:
         one: Präsidium
       group/jugendparlament_leitung/co_praesidium:
