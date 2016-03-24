@@ -107,3 +107,44 @@ de:
         one: Adressverwaltung
       group/easyvote_externe_kontakte/kontakt:
         one: Kontakt
+
+    attributes:
+      group:
+        founding_year: Gründungsjahr
+        language: Sprache
+        area: Geographische Ausdehnung
+        legal_form: Rechtliche Grundlage
+        budget: Budget
+        financial_backer: Geldgeber
+        members_age: Alter Mitglieder
+        political_competences: Politische Kompetenzen
+        supervision: Begleitung
+        state: Status
+        member: DSJ-Mitglied
+        joining_year: Beitrittsjahr DSJ
+        visited_events: Besuchte DSJ-Anlässe
+
+        languages:
+          de: Deutsch
+          fr: Französisch
+          it: Italienisch
+          de_fr: Bilingue (de/fr)
+
+        areas:
+          local: lokal
+          regional: regional
+          cantonal: kantonal
+          federal: national
+
+        legal_forms:
+          public: öffentlich-rechtlich
+          private: privatrechtlich
+
+        states:
+          very_active: sehr aktiv
+          active: aktiv
+          little_active: wenig aktiv
+          passive: passiv
+          on_hold: stillgelegt
+          founding: in Gründung
+          interested: gründungsinteressiert

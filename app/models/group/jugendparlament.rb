@@ -7,9 +7,17 @@
 
 class Group::Jugendparlament < Group
 
+  LANGUAGES = %w(de fr it de_fr)
+  AREAS = %w(local regional cantonal federal)
+  LEGAL_FORMS = %w(public private)
+  STATES = %w(very_active active little_active passive on_hold founding interested)
+
   self.layer = true
   self.default_children = [Group::JugendparlamentLeitung, Group::JugendparlamentVorstand,
                            Group::JugendparlamentMitglieder]
+  self.used_attributes += [:founding_year, :language, :area, :legal_form, :budget,
+                           :financial_backer, :members_age, :political_competences, :supervision,
+                           :state, :member, :joining_year, :visited_events]
 
   children Group::JugendparlamentLeitung,
            Group::JugendparlamentVorstand,
@@ -27,5 +35,29 @@ class Group::Jugendparlament < Group
   class Lieferadresse < ::Role; end
 
   roles Adressverwaltung, Rechnungsadresse, Lieferadresse
+
+  class << self
+    def language_labels
+      labels(LANGUAGES, :languages)
+    end
+
+    def area_labels
+      labels(AREAS, :areas)
+    end
+
+    def legal_form_labels
+      labels(LEGAL_FORMS, :legal_forms)
+    end
+
+    def state_labels
+      labels(STATES, :states)
+    end
+
+    def labels(keys, prefix)
+      keys.each_with_object({}) do |key, labels|
+        labels[key] = I18n.t("activerecord.attributes.group.#{prefix}.#{key}")
+      end
+    end
+  end
 
 end
