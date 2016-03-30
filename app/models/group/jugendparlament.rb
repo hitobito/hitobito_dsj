@@ -24,6 +24,8 @@ class Group::Jugendparlament < Group
            Group::JugendparlamentMitglieder,
            Group::JugendparlamentExterneKontakte
 
+  after_create :create_custom_named_default_children
+
   ### ROLES
 
   class Adressverwaltung < ::Role
@@ -57,6 +59,14 @@ class Group::Jugendparlament < Group
       keys.each_with_object({}) do |key, labels|
         labels[key] = I18n.t("activerecord.attributes.group.#{prefix}.#{key}")
       end
+    end
+  end
+
+  private
+
+  def create_custom_named_default_children
+    %w(Behörden Alumni).each do |name|
+      Group::JugendparlamentExterneKontakte.create!(name: name, parent: self)
     end
   end
 
