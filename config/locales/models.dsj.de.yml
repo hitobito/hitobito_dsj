@@ -148,3 +148,33 @@ de:
           on_hold: stillgelegt
           founding: in Gründung
           interested: gründungsinteressiert
+
+      group/jugendparlament:
+        languages:
+          _nil: ''
+          de: Deutsch
+          fr: Französisch
+          it: Italienisch
+          de_fr: Bilingue (de/fr)
+
+        areas:
+          _nil: ''
+          local: lokal
+          regional: regional
+          cantonal: kantonal
+          federal: national
+
+        legal_forms:
+          _nil: ''
+          public: öffentlich-rechtlich
+          private: privatrechtlich
+
+        states:
+          _nil: ''
+          very_active: sehr aktiv
+          active: aktiv
+          little_active: wenig aktiv
+          passive: passiv
+          on_hold: stillgelegt
+          founding: in Gründung
+          interested: gründungsinteressiert

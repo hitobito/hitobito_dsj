@@ -8,19 +8,19 @@
 module GroupsDsjHelper
 
   def format_group_language(group)
-    I18n.t("activerecord.attributes.group.languages.#{group.language}")
+    group.language_label
   end
 
   def format_group_area(group)
-    I18n.t("activerecord.attributes.group.areas.#{group.area}")
+    group.area_label
   end
 
   def format_group_legal_form(group)
-    I18n.t("activerecord.attributes.group.legal_forms.#{group.legal_form}")
+    group.legal_form_label
   end
 
   def format_group_state(group)
-    I18n.t("activerecord.attributes.group.states.#{group.state}")
+    group.state_label
   end
 
 end

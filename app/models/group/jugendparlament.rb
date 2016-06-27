@@ -7,6 +7,8 @@
 
 class Group::Jugendparlament < Group
 
+  include I18nEnums
+
   LANGUAGES = %w(de fr it de_fr)
   AREAS = %w(local regional cantonal federal)
   LEGAL_FORMS = %w(public private)
@@ -23,6 +25,11 @@ class Group::Jugendparlament < Group
            Group::JugendparlamentVorstand,
            Group::JugendparlamentMitglieder,
            Group::JugendparlamentExterneKontakte
+
+  i18n_enum :language, LANGUAGES
+  i18n_enum :area, AREAS
+  i18n_enum :legal_form, LEGAL_FORMS
+  i18n_enum :state, STATES
 
   after_create :create_custom_named_default_children
 
