@@ -21,7 +21,20 @@ module HitobitoDsj
     config.to_prepare do
       # rubocop:disable SingleSpaceBeforeFirstArg
       # extend application classes here
+
+      # models
       Group.send        :include, Dsj::Group
+      Person.send       :include, Dsj::Person
+
+      # serializers
+      PersonSerializer.send :include, Dsj::PersonSerializer
+
+      # controllers
+      PeopleController.permitted_attrs += [:function, :website, :contact_number]
+
+      # exports
+      Export::Csv::People::PeopleAddress.send :include, Dsj::Export::Csv::People::PeopleAddress
+
       # rubocop:enable SingleSpaceBeforeFirstArg
     end
 

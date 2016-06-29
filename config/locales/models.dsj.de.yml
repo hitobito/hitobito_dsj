@@ -178,3 +178,8 @@ de:
           on_hold: stillgelegt
           founding: in Gründung
           interested: gründungsinteressiert
+
+      person:
+        function: Funktion
+        contact_number: Kontaktnummer
+        website: Website
