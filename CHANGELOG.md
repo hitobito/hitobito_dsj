@@ -5,3 +5,4 @@
 *   DSJ Branding
 *   DSJ Gruppen und Rollen
 *   Zusätzliche Felder für Jugendparlamente
+*   Zusätzliche Felder auf Person
