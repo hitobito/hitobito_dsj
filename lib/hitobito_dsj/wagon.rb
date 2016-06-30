@@ -30,10 +30,12 @@ module HitobitoDsj
       PersonSerializer.send :include, Dsj::PersonSerializer
 
       # controllers
-      PeopleController.permitted_attrs += [:function, :website, :contact_number]
+      PeopleController.permitted_attrs += [:function, :website, :contact_number, :salutation,
+                                           :salutation_addition]
 
       # exports
       Export::Csv::People::PeopleAddress.send :include, Dsj::Export::Csv::People::PeopleAddress
+      Export::Csv::People::PersonRow.send :include, Dsj::Export::Csv::People::PersonRow
 
       # rubocop:enable SingleSpaceBeforeFirstArg
     end

@@ -5,18 +5,15 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-module Dsj::PersonSerializer
-  extend ActiveSupport::Concern
+module Dsj::Export::Csv::People
+  module PersonRow
+    extend ActiveSupport::Concern
 
-  included do
-    extension(:public) do |_|
-      map_properties :function, :website
+    included do
     end
 
-    extension(:details) do |_|
-      map_properties :contact_number, :salutation, :salutation_addition
-      property :salutation, item.salutation_label
+    def salutation
+      entry.salutation_label
     end
   end
-
 end

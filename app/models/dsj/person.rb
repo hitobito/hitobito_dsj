@@ -8,9 +8,20 @@
 module Dsj::Person
   extend ActiveSupport::Concern
 
+  SALUTATIONS = %w(formal_f
+                   formal_m
+                   semi_formal_f
+                   semi_formal_m
+                   informal_f
+                   informal_m
+                   formal_f_m)
+
   included do
     # Define additional used attributes
-    Person::PUBLIC_ATTRS << :function << :website << :contact_number
+    Person::PUBLIC_ATTRS << :function << :website << :contact_number << :salutation <<
+        :salutation_addition
+
+    i18n_enum :salutation, SALUTATIONS
   end
 
 end

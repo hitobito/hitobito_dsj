@@ -183,3 +183,15 @@ de:
         function: Funktion
         contact_number: Kontaktnummer
         website: Website
+        salutation: Anrede
+        salutation_addition: Anrede Zusatz
+
+        salutations:
+          _nil: (keine)
+          formal_f: Sehr geehrte Frau
+          formal_m: Sehr geehrter Herr
+          semi_formal_f: Liebe Frau
+          semi_formal_m: Lieber Herr
+          informal_f: Liebe
+          informal_m: Lieber
+          formal_f_m: Sehr geehrte Damen und Herren
