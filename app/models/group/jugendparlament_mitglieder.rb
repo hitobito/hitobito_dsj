@@ -11,12 +11,8 @@ class Group::JugendparlamentMitglieder < Group
 
   ### ROLES
 
-  class Adressverwaltung < ::Role
-    self.permissions = [:group_full]
-  end
-
   class Mitglied < ::Role; end
 
-  roles Adressverwaltung, Mitglied
+  roles Mitglied
 
 end

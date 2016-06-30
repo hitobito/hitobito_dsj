@@ -70,27 +70,3 @@ jupa_fr:
   name: Conseil des Jeunes du Canton de Fribourg
   type: Group::Jugendparlament
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:jupa_fr) %>
-
-easyvote:
-  parent: dachverband
-  lft: 2
-  rgt: 7
-  name: Easyvote
-  type: Group::Easyvote
-  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:easyvote) %>
-
-easyvote_abo:
-  parent: easyvote
-  lft: 3
-  rgt: 4
-  name: Easyvote
-  type: Group::EasyvoteAbonnenten
-  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:easyvote) %>
-
-easyvote_community:
-  parent: easyvote
-  lft: 5
-  rgt: 6
-  name: Easyvote
-  type: Group::EasyvoteCommunity
-  layer_group_id: <%= ActiveRecord::FixtureSet.identify(:easyvote) %>

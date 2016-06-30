@@ -19,54 +19,59 @@ unless dachverband.address.present?
   end
 end
 
-externalContacts = [{ name: 'Behörden',
-                      children: [{ name: 'Bund',
-                                   children: [{ name: 'EEKJ' },
-                                              { name: 'BSV' },
-                                              { name: 'BK' },
-                                              { name: 'Politiker NR/SR U35' },
-                                              { name: 'Politiker NR/SR WBK' }]
-                                 },
-                                 { name: 'Kanton',
-                                   children: [{ name: 'Jugenddelegierte' },
-                                              { name: 'Kanzleien' }]
-                                 },
-                                 { name: 'Gemeinde',
-                                   children: [{ name: 'Jugenddelegierte/Jugendarbeit' },
-                                              { name: 'Kanzleien' }]
-                                 }]
-                    },
-                    { name: 'Parteien',
-                      children: [{ name: 'National', children: [{ name: 'Politiker' }] },
-                                 { name: 'Jungparteien', children: [{ name: 'Jungpolitiker' }] }]
-                    },
-                    { name: 'Bildungsinstitutionen',
-                      children: [{ name: 'Sekstufe 1' },
-                                 { name: 'Berufsschulen' },
-                                 { name: 'Gymnasien u.ä.' },
-                                 { name: 'Hochschulen/Unis' },
-                                 { name: 'Fachhochschulen' },
-                                 { name: 'Päd. Hochschulen' },
-                                 { name: 'Aus- und Weiterbildung für Lehrer' }]
-                    },
-                    { name: 'Eltern' },
-                    { name: 'Jugendarbeit', children: [{ name: 'DOJ/OJA' }] },
-                    { name: 'Jugendverbände' },
-                    { name: 'Wissenschaft' },
-                    { name: 'Verbände' },
-                    { name: 'Privatwirtschaft' },
-                    { name: 'Weitere Akteure' },
-                    { name: 'Medien',
-                      children: [{ name: 'Nationale Medien' },
-                                 { name: 'Regionale Medien' },
-                                 { name: 'Fachmedien' },
-                                 { name: 'Jugendmedien' },
-                                 { name: 'Onlinemedien' },
-                                 { name: 'TV' },
-                                 { name: 'Radio' },
-                                 { name: 'Print' }]
-                    },
-                    { name: 'Messen' }]
+externalContacts = [
+                    { name: 'Externe Kontakte', children:
+                      [{ name: 'Behörden',
+                        children: [{ name: 'Bund',
+                                     children: [{ name: 'EEKJ' },
+                                                { name: 'BSV' },
+                                                { name: 'BK' },
+                                                { name: 'Politiker NR/SR U35' },
+                                                { name: 'Politiker NR/SR WBK' }]
+                                   },
+                                   { name: 'Kanton',
+                                     children: [{ name: 'Jugenddelegierte' },
+                                                { name: 'Kanzleien' }]
+                                   },
+                                   { name: 'Gemeinde',
+                                     children: [{ name: 'Jugenddelegierte/Jugendarbeit' },
+                                                { name: 'Kanzleien' }]
+                                   }]
+                      },
+                      { name: 'Parteien',
+                        children: [{ name: 'National', children: [{ name: 'Politiker' }] },
+                                   { name: 'Jungparteien', children: [{ name: 'Jungpolitiker' }] }]
+                      },
+                      { name: 'Bildungsinstitutionen',
+                        children: [{ name: 'Sekstufe 1' },
+                                   { name: 'Berufsschulen' },
+                                   { name: 'Gymnasien u.ä.' },
+                                   { name: 'Hochschulen/Unis' },
+                                   { name: 'Fachhochschulen' },
+                                   { name: 'Päd. Hochschulen' },
+                                   { name: 'Aus- und Weiterbildung für Lehrer' }]
+                      },
+                      { name: 'Eltern' },
+                      { name: 'Jugendarbeit', children: [{ name: 'DOJ/OJA' }] },
+                      { name: 'Jugendverbände' },
+                      { name: 'Wissenschaft' },
+                      { name: 'Verbände' },
+                      { name: 'Privatwirtschaft' },
+                      { name: 'Weitere Akteure' },
+                      { name: 'Medien',
+                        children: [{ name: 'Nationale Medien' },
+                                   { name: 'Regionale Medien' },
+                                   { name: 'Fachmedien' },
+                                   { name: 'Jugendmedien' },
+                                   { name: 'Onlinemedien' },
+                                   { name: 'TV' },
+                                   { name: 'Radio' },
+                                   { name: 'Print' }]
+                      },
+                      { name: 'Messen' }
+                    ]}
+                  ]
+
 
 def seedExternalContacts(contacts, parent_id)
   contacts.each do |contact|
@@ -78,6 +83,7 @@ end
 
 seedExternalContacts(externalContacts, dachverband.id)
 
+jupa_stati = ['Aktiv','Im Aufbau','Nicht mehr aktiv']
 
 jupas = ['AG Jugendrat Wohlen',
          'BE Jugendparlament Berner Oberland',
@@ -127,11 +133,10 @@ jupas = ['AG Jugendrat Wohlen',
          'ZH Jugendrat Rifferswil',
          'ZH Jugendrat Rüti']
 
-Group::Jugendparlament.seed(:name, :parent_id,
-                            *jupas.map { |jupa| { name: jupa, parent_id: dachverband.id } })
+Group::JupaStatus.seed(:name, :parent_id, *
+                              jupa_stati.map { |status| {name: status, parent_id: dachverband.id } })
 
-Group::Easyvote.seed(:name, :parent_id,
-                     { name: 'Easyvote',
-                       parent_id: dachverband.id })
+Group::Jugendparlament.seed(:name, :parent_id,
+                           *jupas.map { |jupa| { name: jupa, parent_id: Group::JupaStatus.first.id } })
 
 Group.rebuild!

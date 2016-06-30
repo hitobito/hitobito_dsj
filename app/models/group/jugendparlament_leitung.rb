@@ -13,14 +13,6 @@ class Group::JugendparlamentLeitung < Group
     self.permissions = [:layer_full, :contact_data]
   end
 
-  class CoPraesidium < ::Role
-    self.permissions = [:layer_full, :contact_data]
-  end
-
-  class Adressverwaltung < ::Role
-    self.permissions = [:layer_full]
-  end
-
-  roles Praesidium, CoPraesidium, Adressverwaltung
+  roles Praesidium
 
 end

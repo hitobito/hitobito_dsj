@@ -5,18 +5,20 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-class Group::EasyvoteExterneKontakte < Group
+class Group::DachverbandProjektgruppe < ::Group
 
-  children Group::EasyvoteExterneKontakte
+  children Group::DachverbandProjektgruppe
 
   ### ROLES
 
-  class Adressverwaltung < ::Role
-    self.permissions = [:group_full]
+  class Leitung < ::Role
+    self.permissions = [:group_and_below_full, :contact_data]
   end
 
-  class Kontakt < ::Role; end
+  class Mitglied < ::Role
+    self.permissions = [:group_and_below_read]
+  end
 
-  roles Adressverwaltung, Kontakt
+  roles Leitung, Mitglied
 
 end

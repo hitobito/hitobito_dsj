@@ -5,18 +5,14 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-class Group::EasyvoteCommunity < Group
+class Group::JupaStatus < Group
 
-  children Group::EasyvoteCommunity
+  self.layer = true
+  self.default_children = []
+
+  children Group::Jugendparlament
 
   ### ROLES
 
-  class Adressverwaltung < ::Role
-    self.permissions = [:group_full]
-  end
-
-  class Communitymitglied < ::Role; end
-
-  roles Adressverwaltung, Communitymitglied
 
 end

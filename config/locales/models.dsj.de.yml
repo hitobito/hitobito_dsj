@@ -12,6 +12,9 @@ de:
       group/dachverband:
         one: Dachverband
         other: Dachverbände
+      group/dachverband_intern:
+        one: Intern
+        other: Intern
       group/dachverband_geschaeftsstelle:
         one: Geschäftsstelle
         other: Geschäftsstellen
@@ -21,9 +24,12 @@ de:
       group/dachverband_externe_kontakte:
         one: Externe Kontakte
         other: Externe Kontakte
-      group/dachverband_gremium:
-        one: Gremium
-        other: Gremien
+      group/dachverband_projektgruppe:
+        one: Projektgruppe
+        other: Projektgruppen
+      group/jupa_status:
+        one: Jupa Status
+        other: Jupa Stati
       group/jugendparlament:
         one: Jugendparlament
         other: Jugendparlamente
@@ -39,64 +45,31 @@ de:
       group/jugendparlament_externe_kontakte:
         one: Externe Kontakte
         other: Externe Kontakte
-      group/easyvote:
-        one: Easyvote
-        other: Easyvote
-      group/easyvote_abonnenten:
-        one: Abonnenten
-        other: Abonnenten
-      group/easyvote_community:
-        one: Community
-        other: Communities
-      group/easyvote_externe_kontakte:
-        one: Externe Kontakte
-        other: Externe Kontakte
+      group/jugendparlament_projektgruppe:
+        one: Projektgruppe
+        other: Projektgruppen
 
       ### ROLES
 
-      group/dachverband/adressverwaltung:
-        one: Adressverwaltung
       group/dachverband_geschaeftsstelle/mitarbeiter:
         one: Mitarbeiter/-in
       group/dachverband_vorstand/vorstandsmitglied:
         one: Vorstandsmitglied
-      group/dachverband_externe_kontakte/adressverwaltung:
-        one: Adressverwaltung
       group/dachverband_externe_kontakte/kontakt:
         one: Kontakt
-      group/dachverband_gremium/leitung:
+      group/dachverband_projektgruppe/leitung:
         one: Leitung
-      group/dachverband_gremium/mitglied:
+      group/dachverband_projektgruppe/mitglied:
         one: Mitglied
-      group/jugendparlament/adressverwaltung:
-        one: Adressverwaltung
       group/jugendparlament_leitung/praesidium:
         one: Präsidium
-      group/jugendparlament_leitung/co_praesidium:
-        one: Co-Präsidium
-      group/jugendparlament_leitung/adressverwaltung:
-        one: Adressverwaltung
       group/jugendparlament_vorstand/vorstandsmitglied:
         one: Vorstandsmitglied
-      group/jugendparlament_mitglieder/adressverwaltung:
-        one: Adressverwaltung
       group/jugendparlament_mitglieder/mitglied:
         one: Mitglied
-      group/jugendparlament_externe_kontakte/adressverwaltung:
-        one: Adressverwaltung
       group/jugendparlament_externe_kontakte/kontakt:
         one: Kontakt
-      group/easyvote/adressverwaltung:
-        one: Adressverwaltung
-      group/easyvote_abonnenten/adressverwaltung:
-        one: Adressverwaltung
-      group/easyvote_abonnenten/abonnent:
-        one: Abonnent/-in
-      group/easyvote_community/adressverwaltung:
-        one: Adressverwaltung
-      group/easyvote_community/communitymitglied:
-        one: Communitymitglied
-      group/easyvote_externe_kontakte/adressverwaltung:
-        one: Adressverwaltung
-      group/easyvote_externe_kontakte/kontakt:
-        one: Kontakt
+      group/jugendparlament_projektgruppe/leitung:
+        one: Leitung
+      group/jugendparlament_projektgruppe/mitglied:
+        one: Mitglied

@@ -9,19 +9,15 @@ class Group::Jugendparlament < Group
 
   self.layer = true
   self.default_children = [Group::JugendparlamentLeitung, Group::JugendparlamentVorstand,
-                           Group::JugendparlamentMitglieder]
+                           Group::JugendparlamentMitglieder, Group::JugendparlamentExterneKontakte]
 
   children Group::JugendparlamentLeitung,
            Group::JugendparlamentVorstand,
            Group::JugendparlamentMitglieder,
-           Group::JugendparlamentExterneKontakte
+           Group::JugendparlamentExterneKontakte,
+           Group::JugendparlamentProjektgruppe
 
   ### ROLES
 
-  class Adressverwaltung < ::Role
-    self.permissions = [:layer_full]
-  end
-
-  roles Adressverwaltung
 
 end

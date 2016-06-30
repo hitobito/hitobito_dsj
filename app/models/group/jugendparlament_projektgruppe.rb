@@ -5,18 +5,18 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-class Group::DachverbandGremium < ::Group
+class Group::JugendparlamentProjektgruppe < Group
 
-  children Group::DachverbandGremium
+  children Group::JugendparlamentProjektgruppe
 
   ### ROLES
 
   class Leitung < ::Role
-    self.permissions = [:group_full, :contact_data]
+    self.permissions = [:group_and_below_full]
   end
 
   class Mitglied < ::Role
-    self.permissions = [:group_read]
+    self.permissions = [:group_and_below_read]
   end
 
   roles Leitung, Mitglied

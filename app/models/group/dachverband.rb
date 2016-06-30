@@ -8,21 +8,10 @@
 class Group::Dachverband < Group
 
   self.layer = true
-  self.default_children = [Group::DachverbandGeschaeftsstelle, Group::DachverbandVorstand]
+  self.default_children = [Group::DachverbandIntern]
 
-  children Group::DachverbandGeschaeftsstelle,
-           Group::DachverbandVorstand,
+  children Group::DachverbandIntern,
            Group::DachverbandExterneKontakte,
-           Group::DachverbandGremium,
-           Group::Jugendparlament,
-           Group::Easyvote
-
-  ### ROLES
-
-  class Adressverwaltung < ::Role
-    self.permissions = [:layer_full]
-  end
-
-  roles Adressverwaltung
+           Group::JupaStatus
 
 end

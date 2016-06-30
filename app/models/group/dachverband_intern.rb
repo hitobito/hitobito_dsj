@@ -5,18 +5,14 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-class Group::EasyvoteAbonnenten < Group
+class Group::DachverbandIntern < Group
 
-  children Group::EasyvoteAbonnenten
+  self.default_children = [Group::DachverbandGeschaeftsstelle, Group::DachverbandVorstand]
+
+  children Group::DachverbandGeschaeftsstelle,
+           Group::DachverbandVorstand,
+           Group::DachverbandProjektgruppe
 
   ### ROLES
-
-  class Adressverwaltung < ::Role
-    self.permissions = [:group_full]
-  end
-
-  class Abonnent < ::Role; end
-
-  roles Adressverwaltung, Abonnent
 
 end
