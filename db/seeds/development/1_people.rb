@@ -41,7 +41,8 @@ seeder = DsjPersonSeeder.new
 
 seeder.seed_all_roles
 
-root = Group.root
+office = Group.find_by(name: "Geschäftsstelle")
+
 devs.each do |name, email|
-  seeder.seed_developer(name, email, root, Group::DachverbandGeschaeftsstelle::Mitarbeiter)
+  seeder.seed_developer(name, email, office, Group::DachverbandGeschaeftsstelle::Mitarbeiter)
 end

@@ -5,14 +5,22 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-class Group::JupaStatus < Group
+module GroupsDsjHelper
 
-  self.layer = true
-  self.default_children = []
+  def format_group_language(group)
+    group.language_label
+  end
 
-  children Group::Jugendparlament
+  def format_group_area(group)
+    group.area_label
+  end
 
-  ### ROLES
+  def format_group_legal_form(group)
+    group.legal_form_label
+  end
 
+  def format_group_state(group)
+    group.state_label
+  end
 
 end

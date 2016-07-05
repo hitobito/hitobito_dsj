@@ -5,15 +5,16 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-class Group::Dachverband < Group
+module Dsj::Export::Csv::People
+  module PeopleAddress
+    extend ActiveSupport::Concern
 
-  self.layer = true
-  self.default_children = [Group::DachverbandIntern, Group::DachverbandExterneKontakte]
+    included do
+      alias_method_chain :person_attributes, :dsj
+    end
 
-  children Group::DachverbandIntern,
-           Group::DachverbandExterneKontakte,
-           Group::JugendparlamentStatus
-
-  ### ROLES
-
+    def person_attributes_with_dsj
+      person_attributes_without_dsj + [:function, :website]
+    end
+  end
 end

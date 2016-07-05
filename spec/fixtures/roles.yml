@@ -15,5 +15,5 @@ leader:
 
 member:
   person: member
-  group: dachverband_gremium
-  type: Group::DachverbandGremium::Mitglied
+  group: jupa_be_mitglieder
+  type: Group::JugendparlamentMitglieder::Mitglied

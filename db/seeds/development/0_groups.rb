@@ -133,10 +133,10 @@ jupas = ['AG Jugendrat Wohlen',
          'ZH Jugendrat Rifferswil',
          'ZH Jugendrat Rüti']
 
-Group::JupaStatus.seed(:name, :parent_id, *
+Group::JugendparlamentStatus.seed(:name, :parent_id, *
                               jupa_stati.map { |status| {name: status, parent_id: dachverband.id } })
 
 Group::Jugendparlament.seed(:name, :parent_id,
-                           *jupas.map { |jupa| { name: jupa, parent_id: Group::JupaStatus.first.id } })
+                           *jupas.map { |jupa| { name: jupa, parent_id: Group::JugendparlamentStatus.first.id } })
 
 Group.rebuild!

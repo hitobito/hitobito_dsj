@@ -27,9 +27,12 @@ de:
       group/dachverband_projektgruppe:
         one: Projektgruppe
         other: Projektgruppen
-      group/jupa_status:
+      group/jugendparlament_status:
         one: Jupa Status
         other: Jupa Stati
+      group/dachverband_gremium:
+        one: Gremium
+        other: Gremien
       group/jugendparlament:
         one: Jugendparlament
         other: Jugendparlamente
@@ -73,3 +76,91 @@ de:
         one: Leitung
       group/jugendparlament_projektgruppe/mitglied:
         one: Mitglied
+
+    attributes:
+      group:
+        founding_year: Gründungsjahr
+        language: Sprache
+        area: Geographische Ausdehnung
+        legal_form: Rechtliche Grundlage
+        budget: Budget
+        financial_backer: Geldgeber
+        members_age: Alter Mitglieder
+        political_competences: Politische Kompetenzen
+        supervision: Begleitung
+        state: Status
+        member: DSJ-Mitglied
+        joining_year: Beitrittsjahr DSJ
+        visited_events: Besuchte DSJ-Anlässe
+
+        languages:
+          de: Deutsch
+          fr: Französisch
+          it: Italienisch
+          de_fr: Bilingue (de/fr)
+
+        areas:
+          local: lokal
+          regional: regional
+          cantonal: kantonal
+          federal: national
+
+        legal_forms:
+          public: öffentlich-rechtlich
+          private: privatrechtlich
+
+        states:
+          very_active: sehr aktiv
+          active: aktiv
+          little_active: wenig aktiv
+          passive: passiv
+          on_hold: stillgelegt
+          founding: in Gründung
+          interested: gründungsinteressiert
+
+      group/jugendparlament:
+        languages:
+          _nil: ''
+          de: Deutsch
+          fr: Französisch
+          it: Italienisch
+          de_fr: Bilingue (de/fr)
+
+        areas:
+          _nil: ''
+          local: lokal
+          regional: regional
+          cantonal: kantonal
+          federal: national
+
+        legal_forms:
+          _nil: ''
+          public: öffentlich-rechtlich
+          private: privatrechtlich
+
+        states:
+          _nil: ''
+          very_active: sehr aktiv
+          active: aktiv
+          little_active: wenig aktiv
+          passive: passiv
+          on_hold: stillgelegt
+          founding: in Gründung
+          interested: gründungsinteressiert
+
+      person:
+        function: Funktion
+        contact_number: Kontaktnummer
+        website: Website
+        salutation: Anrede
+        salutation_addition: Anrede Zusatz
+
+        salutations:
+          _nil: (keine)
+          formal_f: Sehr geehrte Frau
+          formal_m: Sehr geehrter Herr
+          semi_formal_f: Liebe Frau
+          semi_formal_m: Lieber Herr
+          informal_f: Liebe
+          informal_m: Lieber
+          formal_f_m: Sehr geehrte Damen und Herren
