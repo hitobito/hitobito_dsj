@@ -1,0 +1,171 @@
+it:
+  activerecord:
+    models:
+      group/dachverband:
+        one: Federazione
+        other: Federazioni
+      group/dachverband_geschaeftsstelle:
+        one: Ufficio
+        other: Uffici
+      group/dachverband_vorstand:
+        one: Comitato
+        other: Comitati
+      group/dachverband_externe_kontakte:
+        one: Contatto esterno
+        other: Contatti esterni
+      group/dachverband_gremium:
+        one: 'Commissione '
+        other: Commissioni
+      group/jugendparlament_status:
+        one: Status PG
+        other: Status PG
+      group/jugendparlament:
+        one: Parlamento dei Giovani
+        other: Parlamenti dei Giovani
+      group/jugendparlament_leitung:
+        one: Direzione
+        other: Direzioni
+      group/jugendparlament_vorstand:
+        one: Comitato
+        other: Comitati
+      group/jugendparlament_mitglieder:
+        one: Membro
+        other: Membri
+      group/jugendparlament_externe_kontakte:
+        one: Contatto esterno
+        other: Contatti esterni
+      group/easyvote:
+        one: easyvote
+        other: easyvote
+      group/easyvote_abonnenten:
+        one: Abbonato
+        other: Abbonati
+      group/easyvote_community:
+        one: Community
+        other: Communities
+      group/easyvote_externe_kontakte:
+        one: Contatto esterno
+        other: Contatti esterni
+      group/dachverband/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/dachverband_geschaeftsstelle/mitarbeiter:
+        one: Collaboratore/trice
+      group/dachverband_vorstand/vorstandsmitglied:
+        one: Membro del comitato
+      group/dachverband_externe_kontakte/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/dachverband_externe_kontakte/kontakt:
+        one: Contatto
+      group/dachverband_gremium/leitung:
+        one: Direzione
+      group/dachverband_gremium/mitglied:
+        one: Membro
+      group/jugendparlament/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/jugendparlament/rechnungsadresse:
+        one: Indirizzo di fatturazione
+      group/jugendparlament/lieferadresse:
+        one: Indirizzo di spedizione
+      group/jugendparlament_leitung/praesidium:
+        one: Presidenza
+      group/jugendparlament_leitung/co_praesidium:
+        one: Co-presidenza
+      group/jugendparlament_leitung/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/jugendparlament_vorstand/vorstandsmitglied:
+        one: Membro del comitato
+      group/jugendparlament_mitglieder/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/jugendparlament_mitglieder/mitglied:
+        one: Membro
+      group/jugendparlament_externe_kontakte/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/jugendparlament_externe_kontakte/kontakt:
+        one: Contatto
+      group/easyvote/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/easyvote_abonnenten/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/easyvote_abonnenten/abonnent:
+        one: Abbonato/Abbonata
+      group/easyvote_community/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/easyvote_community/communitymitglied:
+        one: Membro della community
+      group/easyvote_externe_kontakte/adressverwaltung:
+        one: Gestione degli indirizzi
+      group/easyvote_externe_kontakte/kontakt:
+        one: Contatto
+    attributes:
+      group:
+        founding_year: Anno di creazione
+        language: Lingua
+        area: Estenzione geografica
+        legal_form: Basi legali
+        budget: Budget
+        financial_backer: Finanziatore
+        members_age: Età membro
+        political_competences: Competenze politiche
+        supervision: Accompagnatore
+        state: Status
+        member: Membro FSPG
+        joining_year: Anno di adesione FSPG
+        visited_events: Eventi FSPG frequentati
+        languages:
+          de: Tedesco
+          fr: Francese
+          it: Italiano
+          de_fr: Bilingue (ita/tede)
+        areas:
+          local: locale
+          regional: regionale
+          cantonal: cantonale
+          federal: nazionale
+        legal_forms:
+          public: di diritto pubblico
+          private: di diritto privato
+        states:
+          very_active: molto attivo
+          active: attivo
+          little_active: poco attivo
+          passive: passivo
+          on_hold: inattivo
+          founding: in creazione
+          interested: interessato alla creazione
+      group/jugendparlament:
+        languages:
+          de: Tedesco
+          fr: Francese
+          it: Italiano
+          de_fr: Bilingue (ita/tede)
+        areas:
+          local: locale
+          regional: regionale
+          cantonal: cantonale
+          federal: nazionale
+        legal_forms:
+          public: di diritto pubblico
+          private: di diritto privato
+        states:
+          very_active: molto attivo
+          active: attivo
+          little_active: poco attivo
+          passive: passivo
+          on_hold: inattivo
+          founding: in creazione
+          interested: interessato alla creazione
+      person:
+        function: Funzione
+        contact_number: Numero di contatto
+        website: Web-Site
+        salutation: Titolo
+        salutation_addition: Complemento al titolo
+        salutations:
+          _nil: (nessuno)
+          formal_f: Gentile Signora
+          formal_m: Egrergio Signor
+          semi_formal_f: Signora
+          semi_formal_m: Signor
+          informal_f: Cara
+          informal_m: Caro
+          formal_f_m: Gentili Signore, Egregi Signori,

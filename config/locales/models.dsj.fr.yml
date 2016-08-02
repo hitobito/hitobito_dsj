@@ -1,0 +1,171 @@
+fr:
+  activerecord:
+    models:
+      group/dachverband:
+        one: Fédération
+        other: Fédérations
+      group/dachverband_geschaeftsstelle:
+        one: Bureau
+        other: Bureaux
+      group/dachverband_vorstand:
+        one: Comité
+        other: Comités
+      group/dachverband_externe_kontakte:
+        one: Contact externe
+        other: Contacts externes
+      group/dachverband_gremium:
+        one: Commission
+        other: Commissions
+      group/jugendparlament_status:
+        one: Statut PJ
+        other: Statuts PJ
+      group/jugendparlament:
+        one: Parlement des Jeunes
+        other: Parlements des Jeunes
+      group/jugendparlament_leitung:
+        one: Direction
+        other: Directions
+      group/jugendparlament_vorstand:
+        one: Comité
+        other: Comités
+      group/jugendparlament_mitglieder:
+        one: Membre
+        other: Membres
+      group/jugendparlament_externe_kontakte:
+        one: Contact externe
+        other: Contacts externes
+      group/easyvote:
+        one: Easyvote
+        other: Easyvote
+      group/easyvote_abonnenten:
+        one: Abonné
+        other: Abonnés
+      group/easyvote_community:
+        one: Communeauté
+        other: Communeautés
+      group/easyvote_externe_kontakte:
+        one: Contact externe
+        other: Contacts externes
+      group/dachverband/adressverwaltung:
+        one: Gestion des adresses
+      group/dachverband_geschaeftsstelle/mitarbeiter:
+        one: Collaborateur/trice
+      group/dachverband_vorstand/vorstandsmitglied:
+        one: Membre du comité
+      group/dachverband_externe_kontakte/adressverwaltung:
+        one: Gestion des adresses
+      group/dachverband_externe_kontakte/kontakt:
+        one: Contact
+      group/dachverband_gremium/leitung:
+        one: Direction
+      group/dachverband_gremium/mitglied:
+        one: Membre
+      group/jugendparlament/adressverwaltung:
+        one: Gestion des adresses
+      group/jugendparlament/rechnungsadresse:
+        one: Adresse de facturation
+      group/jugendparlament/lieferadresse:
+        one: Adresse de livraison
+      group/jugendparlament_leitung/praesidium:
+        one: Présidence
+      group/jugendparlament_leitung/co_praesidium:
+        one: Co-Présidence
+      group/jugendparlament_leitung/adressverwaltung:
+        one: Gestion des adresses
+      group/jugendparlament_vorstand/vorstandsmitglied:
+        one: Membre du comité
+      group/jugendparlament_mitglieder/adressverwaltung:
+        one: Gestion des adresses
+      group/jugendparlament_mitglieder/mitglied:
+        one: Membre
+      group/jugendparlament_externe_kontakte/adressverwaltung:
+        one: Gestion des adresses
+      group/jugendparlament_externe_kontakte/kontakt:
+        one: Contact
+      group/easyvote/adressverwaltung:
+        one: Gestion des adresses
+      group/easyvote_abonnenten/adressverwaltung:
+        one: Gestion des adresses
+      group/easyvote_abonnenten/abonnent:
+        one: Abonné/e
+      group/easyvote_community/adressverwaltung:
+        one: Gestion des adresses
+      group/easyvote_community/communitymitglied:
+        one: Membre d'une communeauté
+      group/easyvote_externe_kontakte/adressverwaltung:
+        one: Gestion des adresses
+      group/easyvote_externe_kontakte/kontakt:
+        one: Contact
+    attributes:
+      group:
+        founding_year: Année de création
+        language: Langue
+        area: Etendue géographique
+        legal_form: Base légale
+        budget: Budget
+        financial_backer: Bailleur(s) de fonds
+        members_age: Age des membres
+        political_competences: Compétences politiques
+        supervision: Accompagnement
+        state: Statut
+        member: Membre de la FSPJ
+        joining_year: Année d'adhésion à la FSPJ
+        visited_events: Evénements FSPJ visités
+        languages:
+          de: Allemand
+          fr: Français
+          it: Italien
+          de_fr: Bilingue (all/fr)
+        areas:
+          local: Local
+          regional: Régional
+          cantonal: Cantonal
+          federal: National
+        legal_forms:
+          public: De droit public
+          private: De droit privé
+        states:
+          very_active: Très actif
+          active: Actif
+          little_active: Peu actif
+          passive: Passif
+          on_hold: En suspens
+          founding: En création
+          interested: Intérêt à la création
+      group/jugendparlament:
+        languages:
+          de: Allemand
+          fr: Français
+          it: Italien
+          de_fr: Bilingue (fr/all)
+        areas:
+          local: Local
+          regional: Régional
+          cantonal: Cantonal
+          federal: National
+        legal_forms:
+          public: De droit public
+          private: De droit privé
+        states:
+          very_active: Très actif
+          active: Actif
+          little_active: Peu actif
+          passive: Passif
+          on_hold: En suspens
+          founding: En création
+          interested: Intéret à la création
+      person:
+        function: Fonction
+        contact_number: Numéro de téléphone
+        website: Site web
+        salutation: Titre
+        salutation_addition: Compément de titre
+        salutations:
+          _nil: (aucun)
+          formal_f: Madame
+          formal_m: Monsieur
+          semi_formal_f: Chère Madame
+          semi_formal_m: Cher Monsieur
+          informal_f: Chère
+          informal_m: Cher
+          formal_f_m: 'Mesdames, Messieurs, '
