@@ -22,6 +22,7 @@ module Dsj::Person
         :salutation_addition
 
     i18n_enum :salutation, SALUTATIONS
+    i18n_setter :salutation, SALUTATIONS + [nil]
   end
 
 end
