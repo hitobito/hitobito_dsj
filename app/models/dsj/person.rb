@@ -8,21 +8,38 @@
 module Dsj::Person
   extend ActiveSupport::Concern
 
-  SALUTATIONS = %w(formal_f
-                   formal_m
-                   semi_formal_f
-                   semi_formal_m
-                   informal_f
-                   informal_m
-                   formal_f_m)
-
   included do
     # Define additional used attributes
     Person::PUBLIC_ATTRS << :function << :website << :contact_number << :salutation <<
         :salutation_addition
 
-    i18n_enum :salutation, SALUTATIONS
-    i18n_setter :salutation, SALUTATIONS + [nil]
+    Person::SALUTATIONS = [
+      [:formal_f_de, 'Sehr geehrte Frau'],
+      [:formal_m_de, 'Sehr geehrter Herr'],
+      [:semi_formal_f_de, 'Liebe Frau'],
+      [:semi_formal_m_de, 'Lieber Herr'],
+      [:informal_f_de, 'Liebe'],
+      [:informal_m_de, 'Lieber'],
+      [:formal_f_m_de, 'Sehr geehrte Damen und Herren'],
+      [:formal_f_fr, 'Madame'],
+      [:formal_m_fr, 'Monsieur'],
+      [:semi_formal_f_fr, 'Chère Madame'],
+      [:semi_formal_m_fr, 'Cher Monsieur'],
+      [:informal_f_fr, 'Chère'],
+      [:informal_m_fr, 'Cher'],
+      [:formal_f_m_fr, 'Mesdames, Messieurs'],
+      [:formal_f_it, 'Gentile Signora'],
+      [:formal_m_it, 'Egregio Signor'],
+      [:semi_formal_f_it, 'Signora'],
+      [:semi_formal_m_it, 'Signor'],
+      [:informal_f_it, 'Cara'],
+      [:informal_m_it, 'Caro'],
+      [:formal_f_m_it, 'Gentili Signore, Egregi Signori']
+    ]
+  end
+
+  def salutation_label
+    Person::SALUTATIONS.find { |s| s.first == salutation.to_sym }.try(:second) if salutation.present?
   end
 
 end
