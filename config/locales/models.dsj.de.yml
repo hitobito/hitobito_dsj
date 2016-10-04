@@ -56,26 +56,37 @@ de:
 
       group/dachverband_geschaeftsstelle/mitarbeiter:
         one: Mitarbeiter/-in
+        other: Mitarbeiter/-innen
       group/dachverband_vorstand/vorstandsmitglied:
         one: Vorstandsmitglied
+        other: Vorstandsmitglieder
       group/dachverband_externe_kontakte/kontakt:
         one: Kontakt
+        other: Kontakte
       group/dachverband_projektgruppe/leitung:
         one: Leitung
+        other: Leitung
       group/dachverband_projektgruppe/mitglied:
         one: Mitglied
+        other: Mitglieder
       group/jugendparlament_leitung/praesidium:
         one: Präsidium
+        other: Präsidium
       group/jugendparlament_vorstand/vorstandsmitglied:
         one: Vorstandsmitglied
+        other: Vorstandsmitglieder
       group/jugendparlament_mitglieder/mitglied:
         one: Mitglied
+        other: Mitglieder
       group/jugendparlament_externe_kontakte/kontakt:
         one: Kontakt
+        other: Kontakte
       group/jugendparlament_projektgruppe/leitung:
         one: Leitung
+        other: Leitung
       group/jugendparlament_projektgruppe/mitglied:
         one: Mitglied
+        other: Mitglieder
 
     attributes:
       group:
