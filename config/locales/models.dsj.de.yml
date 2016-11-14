@@ -111,10 +111,11 @@ de:
           de_fr: Bilingue (de/fr)
 
         areas:
-          local: lokal
+          local: kommunal
           regional: regional
           cantonal: kantonal
           federal: national
+          other: andere
 
         legal_forms:
           public: öffentlich-rechtlich
@@ -139,10 +140,11 @@ de:
 
         areas:
           _nil: ''
-          local: lokal
+          local: kommunal
           regional: regional
           cantonal: kantonal
           federal: national
+          other: andere
 
         legal_forms:
           _nil: ''

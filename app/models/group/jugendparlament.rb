@@ -10,7 +10,7 @@ class Group::Jugendparlament < Group
   include I18nEnums
 
   LANGUAGES = %w(de fr it de_fr)
-  AREAS = %w(local regional cantonal federal)
+  AREAS = %w(local regional cantonal federal other)
   LEGAL_FORMS = %w(public private)
   STATES = %w(very_active active little_active passive on_hold founding interested)
 
