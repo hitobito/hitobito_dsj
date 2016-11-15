@@ -27,6 +27,7 @@ module HitobitoDsj
       Person.send       :include, Dsj::Person
 
       # serializers
+      GroupSerializer.send :include, Dsj::GroupSerializer
       PersonSerializer.send :include, Dsj::PersonSerializer
 
       # controllers
