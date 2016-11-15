@@ -96,6 +96,7 @@ de:
         legal_form: Rechtliche Grundlage
         budget: Budget
         financial_backer: Geldgeber
+        members_count: Anzahl Mitglieder
         members_age: Alter Mitglieder
         political_competences: Politische Kompetenzen
         supervision: Begleitung
@@ -103,6 +104,9 @@ de:
         member: DSJ-Mitglied
         joining_year: Beitrittsjahr DSJ
         visited_events: Besuchte DSJ-Anlässe
+        contact_history: Kontakthistory
+        last_contact: Letzter Kontakt
+        remarks: Bemerkungen
 
         languages:
           de: Deutsch

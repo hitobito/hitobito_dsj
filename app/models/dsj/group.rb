@@ -9,9 +9,7 @@ module Dsj::Group
   extend ActiveSupport::Concern
 
   included do
-    # Define additional used attributes
-    # self.used_attributes += [:website, :bank_account, :description]
-    # self.superior_attributes = [:bank_account]
+    self.used_attributes += [:remarks, :members_count, :contact_history, :last_contact]
 
     root_types Group::Dachverband
   end
