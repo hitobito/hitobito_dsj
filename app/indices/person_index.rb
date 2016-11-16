@@ -6,5 +6,6 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 ThinkingSphinx::Index.define_partial :person do
+  indexes function, website, contact_number
   indexes tags.name, as: :tag
 end
