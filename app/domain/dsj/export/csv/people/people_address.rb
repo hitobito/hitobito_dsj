@@ -14,7 +14,8 @@ module Dsj::Export::Csv::People
     end
 
     def person_attributes_with_dsj
-      person_attributes_without_dsj + [:function, :website]
+      person_attributes_without_dsj + [:function, :website, :contact_number, :salutation,
+                                       :salutation_addition]
     end
   end
 end
