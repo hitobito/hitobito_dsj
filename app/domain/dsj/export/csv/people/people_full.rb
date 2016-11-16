@@ -6,7 +6,7 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 module Dsj::Export::Csv::People
-  module PeopleAddress
+  module PeopleFull
     extend ActiveSupport::Concern
 
     included do
@@ -14,8 +14,7 @@ module Dsj::Export::Csv::People
     end
 
     def person_attributes_with_dsj
-      person_attributes_without_dsj + [:tags, :function, :website, :contact_number, :salutation,
-                                       :salutation_addition]
+      person_attributes_without_dsj + [:tags]
     end
   end
 end

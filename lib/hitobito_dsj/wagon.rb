@@ -36,6 +36,7 @@ module HitobitoDsj
 
       # exports
       Export::Csv::People::PeopleAddress.send :include, Dsj::Export::Csv::People::PeopleAddress
+      Export::Csv::People::PeopleFull.send :include, Dsj::Export::Csv::People::PeopleFull
       Export::Csv::People::PersonRow.send :include, Dsj::Export::Csv::People::PersonRow
 
       # rubocop:enable SingleSpaceBeforeFirstArg
