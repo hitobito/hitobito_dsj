@@ -26,6 +26,7 @@ puzzlers = ['Pascal Zumkehr',
             'Mathis Hofer',
             'Andre Kunz',
             'Pascal Simon',
+            'Matthias Viehweger',
             'Roland Studer']
 
 devs = {
