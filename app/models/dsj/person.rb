@@ -44,4 +44,16 @@ module Dsj::Person
     end
   end
 
+  def salutation=(value)
+    super(value)
+
+    normalized = value.to_s.strip.downcase
+    Person::SALUTATIONS.map(&:first).each do |v|
+      translated = Person::SALUTATIONS.find { |s| s.first == v }.try(:second)
+      super(v) if translated.downcase == normalized
+    end
+
+    value
+  end
+
 end
