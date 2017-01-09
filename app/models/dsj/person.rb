@@ -36,6 +36,8 @@ module Dsj::Person
       [:informal_m_it, 'Caro'],
       [:formal_f_m_it, 'Gentili Signore, Egregi Signori']
     ]
+
+    validates :salutation, inclusion: Person::SALUTATIONS.map(&:first).map(&:to_s), allow_blank: true
   end
 
   def salutation_label
