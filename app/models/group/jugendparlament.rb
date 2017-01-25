@@ -9,10 +9,10 @@ class Group::Jugendparlament < Group
 
   include I18nEnums
 
-  LANGUAGES = %w(de fr it de_fr)
-  AREAS = %w(local regional cantonal federal other)
-  LEGAL_FORMS = %w(public private)
-  STATES = %w(very_active active little_active passive on_hold founding interested)
+  LANGUAGES = %w(de fr it de_fr).freeze
+  AREAS = %w(local regional cantonal federal other).freeze
+  LEGAL_FORMS = %w(public private).freeze
+  STATES = %w(very_active active little_active passive on_hold founding interested).freeze
 
   self.layer = true
   self.default_children = [Group::JugendparlamentLeitung,

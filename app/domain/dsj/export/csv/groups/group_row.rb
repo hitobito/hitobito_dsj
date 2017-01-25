@@ -27,4 +27,3 @@ module Dsj::Export::Csv::Groups
 
   end
 end
-
