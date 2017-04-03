@@ -5,8 +5,9 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-module Dsj::Export::Csv::People
-  module PeopleFull
+module Dsj::Export::Tabular::People
+  module PeopleAddress
+
     extend ActiveSupport::Concern
 
     included do
@@ -14,7 +15,9 @@ module Dsj::Export::Csv::People
     end
 
     def person_attributes_with_dsj
-      person_attributes_without_dsj + [:tags]
+      person_attributes_without_dsj + [:tags, :function, :website, :contact_number, :salutation,
+                                       :salutation_addition]
     end
+
   end
 end

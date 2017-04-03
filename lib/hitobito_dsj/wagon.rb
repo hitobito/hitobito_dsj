@@ -35,10 +35,11 @@ module HitobitoDsj
                                            :salutation_addition]
 
       # exports
-      Export::Csv::Groups::GroupRow.send :include, Dsj::Export::Csv::Groups::GroupRow
-      Export::Csv::People::PeopleAddress.send :include, Dsj::Export::Csv::People::PeopleAddress
-      Export::Csv::People::PeopleFull.send :include, Dsj::Export::Csv::People::PeopleFull
-      Export::Csv::People::PersonRow.send :include, Dsj::Export::Csv::People::PersonRow
+      Export::Tabular::Groups::Row.send :include, Dsj::Export::Tabular::Groups::Row
+      Export::Tabular::People::PeopleAddress.send(
+          :include, Dsj::Export::Tabular::People::PeopleAddress)
+      Export::Tabular::People::PeopleFull.send :include, Dsj::Export::Tabular::People::PeopleFull
+      Export::Tabular::People::PersonRow.send :include, Dsj::Export::Tabular::People::PersonRow
 
       # rubocop:enable SingleSpaceBeforeFirstArg
     end

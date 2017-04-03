@@ -5,8 +5,8 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-module Dsj::Export::Csv::Groups
-  module GroupRow
+module Dsj::Export::Tabular::Groups
+  module Row
     extend ActiveSupport::Concern
 
     def language

@@ -5,15 +5,12 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-module Dsj::Export::Csv::People
+module Dsj::Export::Tabular::People
   module PersonRow
-    extend ActiveSupport::Concern
-
-    included do
-    end
 
     def salutation
       entry.salutation_label
     end
+
   end
 end
