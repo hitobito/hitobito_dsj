@@ -42,7 +42,8 @@ module Dsj::Person
 
   def salutation_label
     if salutation.present?
-      Person::SALUTATIONS.find { |s| s.first == salutation.to_sym }.second
+      entry = Person::SALUTATIONS.find { |s| s.first.to_s == salutation.to_s }
+      entry ? entry.second : salutation
     end
   end
 
