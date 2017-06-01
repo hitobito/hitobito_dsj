@@ -15,8 +15,7 @@ module Dsj::Export::Tabular::People
     end
 
     def person_attributes_with_dsj
-      person_attributes_without_dsj + [:tags, :function, :website, :contact_number, :salutation,
-                                       :salutation_addition]
+      person_attributes_without_dsj + [:tags, :function, :website, :contact_number, :salutation, :salutation_addition]
     end
 
   end
