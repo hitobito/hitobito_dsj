@@ -11,7 +11,7 @@ module Dsj::Person
   included do
     # Define additional used attributes
     Person::PUBLIC_ATTRS << :function << :website << :contact_number << :salutation <<
-        :salutation_addition
+        :salutation_addition << :financial_support
 
     Person::SALUTATIONS = [
       [:formal_f_de, 'Sehr geehrte Frau'],

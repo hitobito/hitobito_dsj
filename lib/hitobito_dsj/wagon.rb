@@ -32,7 +32,7 @@ module HitobitoDsj
 
       # controllers
       PeopleController.permitted_attrs += [:function, :website, :contact_number, :salutation,
-                                           :salutation_addition]
+                                           :salutation_addition, :financial_support]
 
       # exports
       Export::Tabular::Groups::Row.send :include, Dsj::Export::Tabular::Groups::Row
