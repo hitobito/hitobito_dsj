@@ -9,10 +9,14 @@ class Group::DachverbandGeschaeftsstelle < ::Group
 
   ### ROLES
 
-  class Mitarbeiter < ::Role
-    self.permissions = [:admin, :layer_and_below_full, :contact_data]
+  class Admin < ::Role
+    self.permissions = [:layer_and_below_full, :admin, :contact_data]
   end
 
-  roles Mitarbeiter
+  class Mitarbeiter < ::Role
+    self.permissions = [:group_read, :contact_data]
+  end
+
+  roles Admin, Mitarbeiter
 
 end

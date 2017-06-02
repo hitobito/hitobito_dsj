@@ -13,12 +13,19 @@ module HitobitoDsj
     app_requirement '>= 0'
 
     # Add a load path for this specific wagon
-    config.autoload_paths += %W( #{config.root}/app/abilities
-                                 #{config.root}/app/domain
-                                 #{config.root}/app/jobs )
+    config.autoload_paths += %W(
+      #{config.root}/app/abilities
+      #{config.root}/app/domain
+      #{config.root}/app/jobs
+    )
 
     config.to_prepare do
       # extend application classes here
+
+      # abilities
+      NoteAbility.send :include, Dsj::NoteAbility
+      PersonAbility.send :include, Dsj::PersonAbility
+      PersonReadables.send :include, Dsj::PersonReadables
 
       # models
       Group.send        :include, Dsj::Group
@@ -39,6 +46,7 @@ module HitobitoDsj
       )
       Export::Tabular::People::PeopleFull.send :include, Dsj::Export::Tabular::People::PeopleFull
       Export::Tabular::People::PersonRow.send :include, Dsj::Export::Tabular::People::PersonRow
+
     end
 
     initializer 'dsj.add_settings' do |_app|

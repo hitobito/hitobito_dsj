@@ -54,12 +54,18 @@ de:
 
       ### ROLES
 
+      group/dachverband_geschaeftsstelle/admin:
+        one: Administrator/-in
+        other: Administratoren
       group/dachverband_geschaeftsstelle/mitarbeiter:
         one: Mitarbeiter/-in
         other: Mitarbeiter/-innen
       group/dachverband_vorstand/vorstandsmitglied:
         one: Vorstandsmitglied
         other: Vorstandsmitglieder
+      group/dachverband_externe_kontakte/adressverwaltung:
+        one: Adressverwalter/-in
+        other: Adressvewalter/-innen
       group/dachverband_externe_kontakte/kontakt:
         one: Kontakt
         other: Kontakte
@@ -87,6 +93,9 @@ de:
       group/jugendparlament_projektgruppe/mitglied:
         one: Mitglied
         other: Mitglieder
+      group/jugendparlament_status/adressverwaltung:
+        one: Adressverwalter/-in
+        other: Adressvewalter/-innen
 
     attributes:
       group:

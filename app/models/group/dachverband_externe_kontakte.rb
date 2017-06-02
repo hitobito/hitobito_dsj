@@ -11,8 +11,12 @@ class Group::DachverbandExterneKontakte < Group
 
   ### ROLES
 
+  class Adressverwaltung < ::Role
+    self.permissions = [:group_and_below_full]
+  end
+
   class Kontakt < ::Role; end
 
-  roles Kontakt
+  roles Adressverwaltung, Kontakt
 
 end

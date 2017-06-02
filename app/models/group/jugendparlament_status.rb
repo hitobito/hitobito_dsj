@@ -11,4 +11,10 @@ class Group::JugendparlamentStatus < Group
 
   children Group::Jugendparlament
 
+  class Adressverwaltung < ::Role
+    self.permissions = [:layer_and_below_full, :contact_data]
+  end
+
+  roles Adressverwaltung
+
 end
