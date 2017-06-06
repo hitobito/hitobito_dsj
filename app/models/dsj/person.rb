@@ -11,7 +11,7 @@ module Dsj::Person
   included do
     # Define additional used attributes
     Person::PUBLIC_ATTRS << :function << :website << :contact_number << :salutation <<
-        :salutation_addition
+        :salutation_addition << :financial_support
 
     Person::SALUTATIONS = [
       [:formal_f_de, 'Sehr geehrte Frau'],
@@ -35,7 +35,7 @@ module Dsj::Person
       [:informal_f_it, 'Cara'],
       [:informal_m_it, 'Caro'],
       [:formal_f_m_it, 'Gentili Signore, Egregi Signori']
-    ]
+    ].freeze
 
     validates :salutation, inclusion: Person::SALUTATIONS.map { |k, _| k.to_s }, allow_blank: true
   end
