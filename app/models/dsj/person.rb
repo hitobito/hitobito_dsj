@@ -35,7 +35,7 @@ module Dsj::Person
       [:informal_f_it, 'Cara'],
       [:informal_m_it, 'Caro'],
       [:formal_f_m_it, 'Gentili Signore, Egregi Signori']
-    ]
+    ].freeze
 
     validates :salutation, inclusion: Person::SALUTATIONS.map { |k, _| k.to_s }, allow_blank: true
   end
