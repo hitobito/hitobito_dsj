@@ -15,11 +15,9 @@ module HitobitoDsj
     # Add a load path for this specific wagon
     config.autoload_paths += %W( #{config.root}/app/abilities
                                  #{config.root}/app/domain
-                                 #{config.root}/app/jobs
-                               )
+                                 #{config.root}/app/jobs )
 
     config.to_prepare do
-      # rubocop:disable SingleSpaceBeforeFirstArg
       # extend application classes here
 
       # models
@@ -32,16 +30,15 @@ module HitobitoDsj
 
       # controllers
       PeopleController.permitted_attrs += [:function, :website, :contact_number, :salutation,
-                                           :salutation_addition]
+                                           :salutation_addition, :financial_support]
 
       # exports
       Export::Tabular::Groups::Row.send :include, Dsj::Export::Tabular::Groups::Row
       Export::Tabular::People::PeopleAddress.send(
-          :include, Dsj::Export::Tabular::People::PeopleAddress)
+        :include, Dsj::Export::Tabular::People::PeopleAddress
+      )
       Export::Tabular::People::PeopleFull.send :include, Dsj::Export::Tabular::People::PeopleFull
       Export::Tabular::People::PersonRow.send :include, Dsj::Export::Tabular::People::PersonRow
-
-      # rubocop:enable SingleSpaceBeforeFirstArg
     end
 
     initializer 'dsj.add_settings' do |_app|

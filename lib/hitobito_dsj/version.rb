@@ -6,5 +6,5 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 module HitobitoDsj
-  VERSION = '0.0.1'
+  VERSION = '0.0.1'.freeze
 end

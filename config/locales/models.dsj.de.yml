@@ -171,6 +171,7 @@ de:
         website: Website
         salutation: Anrede
         salutation_addition: Anrede Zusatz
+        financial_support: Finanzielle Unterstützung
 
         salutations:
           _nil: (keine)
