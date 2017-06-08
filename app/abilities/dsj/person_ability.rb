@@ -10,7 +10,7 @@ module Dsj::PersonAbility
 
   included do
     on(Person) do
-      permission(:any).may(:show).if_geschaeftsstellen_mitarbeiter
+      permission(:any).may(:show).if_herself_or_geschaeftsstellen_mitarbeiter
 
       permission(:group_full)
         .may(:index_tags, :manage_tags, :index_notes)
@@ -23,7 +23,11 @@ module Dsj::PersonAbility
     end
   end
 
-  def if_geschaeftsstellen_mitarbeiter
+  def if_herself_or_geschaeftsstellen_mitarbeiter
+    herself || geschaeftsstellen_mitarbeiter?
+  end
+
+  def geschaeftsstellen_mitarbeiter?
     user.roles.any? do |role|
       role.is_a?(Group::DachverbandGeschaeftsstelle::Mitarbeiter)
     end
