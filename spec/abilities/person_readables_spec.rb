@@ -9,37 +9,77 @@ require 'spec_helper'
 
 describe PersonReadables do
 
-  let(:role)  { Fabricate(Group::DachverbandGeschaeftsstelle::Mitarbeiter.name, group: groups(:dachverband_gs)) }
-  let(:user)  { role.person.reload }
-  let(:group) { groups(:jupa_be_mitglieder) }
+  context 'Mitarbeiter' do
 
-  subject { Person.accessible_by(ability) }
+    let(:role)  { Fabricate(Group::DachverbandGeschaeftsstelle::Mitarbeiter.name, group: groups(:dachverband_gs)) }
+    let(:user)  { role.person.reload }
+    let(:group) { groups(:jupa_be_mitglieder) }
 
-  context 'in a lower layer' do
-    let(:ability) { PersonReadables.new(user, group) }
+    subject { Person.accessible_by(ability) }
 
-    it 'may see people' do
-      other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
-      is_expected.to include(other.person)
+    context 'in a lower layer' do
+      let(:ability) { PersonReadables.new(user, group) }
+
+      it 'may see people' do
+        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
+        is_expected.to include(other.person)
+      end
+    end
+
+    context 'in same group' do
+      let(:group)   { role.group }
+      let(:ability) { PersonReadables.new(user, group) }
+
+      it 'may see people' do
+        other = Fabricate(role.class.name, group: group)
+        is_expected.to include(other.person)
+      end
+    end
+
+    context 'in globally' do
+      let(:ability) { PersonReadables.new(user, nil) }
+
+      it 'may see people' do
+        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
+        is_expected.to include(other.person)
+      end
     end
   end
 
-  context 'in same group' do
-    let(:group)   { role.group }
-    let(:ability) { PersonReadables.new(user, group) }
+  context 'Vorstandsmitglied' do
 
-    it 'may see people' do
-      other = Fabricate(role.class.name, group: group)
-      is_expected.to include(other.person)
+    let(:role)  { Fabricate(Group::DachverbandVorstand::Vorstandsmitglied.name, group: groups(:dachverband_vorstand)) }
+    let(:user)  { role.person.reload }
+    let(:group) { groups(:jupa_be_mitglieder) }
+
+    subject { Person.accessible_by(ability) }
+
+    context 'in a lower layer' do
+      let(:ability) { PersonReadables.new(user, group) }
+
+      it 'may see people' do
+        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
+        is_expected.to include(other.person)
+      end
     end
-  end
 
-  context 'in globally' do
-    let(:ability) { PersonReadables.new(user, nil) }
+    context 'in same group' do
+      let(:group)   { role.group }
+      let(:ability) { PersonReadables.new(user, group) }
 
-    it 'may see people' do
-      other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
-      is_expected.to include(other.person)
+      it 'may see people' do
+        other = Fabricate(role.class.name, group: group)
+        is_expected.to include(other.person)
+      end
+    end
+
+    context 'in globally' do
+      let(:ability) { PersonReadables.new(user, nil) }
+
+      it 'may see people' do
+        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
+        is_expected.to include(other.person)
+      end
     end
   end
 

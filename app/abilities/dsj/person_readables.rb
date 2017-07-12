@@ -14,7 +14,7 @@ module Dsj::PersonReadables
   end
 
   def accessible_people_with_mitarbeiter
-    if user_is_mitarbeiter?
+    if user_is_mitarbeiter_or_vorstandsmitglied?
       Person.only_public_data
             .joins(roles: :group)
             .where(roles: { deleted_at: nil }, groups: { deleted_at: nil })
@@ -24,14 +24,16 @@ module Dsj::PersonReadables
   end
 
   def layer_and_below_read_in_above_layer_with_mitarbeiter?
-    user_is_mitarbeiter? || layer_and_below_read_in_above_layer_without_mitarbeiter?
+    user_is_mitarbeiter_or_vorstandsmitglied? ||
+      layer_and_below_read_in_above_layer_without_mitarbeiter?
   end
 
   private
 
-  def user_is_mitarbeiter?
+  def user_is_mitarbeiter_or_vorstandsmitglied?
     user.roles.any? do |role|
-      role.is_a?(Group::DachverbandGeschaeftsstelle::Mitarbeiter)
+      role.is_a?(Group::DachverbandGeschaeftsstelle::Mitarbeiter) ||
+        role.is_a?(Group::DachverbandVorstand::Vorstandsmitglied)
     end
   end
 

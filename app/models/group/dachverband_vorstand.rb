@@ -10,7 +10,7 @@ class Group::DachverbandVorstand < ::Group
   ### ROLES
 
   class Vorstandsmitglied < ::Role
-    self.permissions = [:layer_full, :contact_data]
+    self.permissions = [:group_read, :contact_data]
   end
 
   roles Vorstandsmitglied
