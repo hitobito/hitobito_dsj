@@ -13,7 +13,9 @@ dachverband = Group.roots.first
 srand(42)
 
 unless dachverband.address.present?
-  dachverband.update_attributes(seeder.group_attributes)
+  # avoid callbacks to prevent creating default groups twice
+  dachverein.update_columns(seeder.group_attributes)
+
   dachverband.default_children.each do |child_class|
     child_class.first.update_attributes(seeder.group_attributes)
   end
