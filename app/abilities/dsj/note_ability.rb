@@ -11,12 +11,20 @@ module Dsj::NoteAbility
   included do
     on(Note) do
 
+      permission(:layer_full).
+        may(:update).
+        in_same_layer
+
+      permission(:layer_and_below_full).
+        may(:update).
+        in_same_layer_or_below
+
       permission(:group_full).
-        may(:create, :show, :destroy).
+        may(:create, :show, :update, :destroy).
         in_same_group
 
       permission(:group_and_below_full).
-        may(:create, :show, :destroy).
+        may(:create, :show, :update, :destroy).
         in_same_group_or_below
 
     end

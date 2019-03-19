@@ -12,6 +12,12 @@ Rails.application.routes.draw do
   language_scope do
     # Define wagon routes here
 
+    resources :groups do
+      resources :people do
+        resources :notes, only: [:create, :destroy, :edit, :update]
+      end
+    end
+
   end
 
 end

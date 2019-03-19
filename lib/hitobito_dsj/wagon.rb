@@ -38,6 +38,7 @@ module HitobitoDsj
       # controllers
       PeopleController.permitted_attrs += [:function, :website, :contact_number, :salutation,
                                            :salutation_addition, :financial_support]
+      NotesController.send :include, Dsj::NotesController
 
       # exports
       Export::Tabular::Groups::Row.send :include, Dsj::Export::Tabular::Groups::Row

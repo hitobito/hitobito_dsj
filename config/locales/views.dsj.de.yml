@@ -4,4 +4,6 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 de:
-  foo: Foo
+  notes:
+    actions_edit:
+      title: Notiz bearbeiten
