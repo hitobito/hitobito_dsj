@@ -5,10 +5,16 @@
 
 module Sheet
   class Note < Base
-    delegate :t, to: :I18n
+
+    self.parent_sheet = Sheet::Person
 
     def title
-      t('notes.actions_edit.title')
+      I18n.t('notes.actions_edit.title')
+    end
+
+    def current_parent_nav_path
+      view.group_people_path(parent_sheet.parent_sheet.entry.id,
+                             parent_sheet.entry.id)
     end
 
   end

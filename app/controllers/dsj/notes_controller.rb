@@ -14,8 +14,7 @@ module Dsj
     end
 
     def update
-      @note = Note.find(params[:id])
-      authorize!(:update, @note)
+      authorize!(:update, note)
       @note.assign_attributes(permitted_params.merge(author_id: current_user.id))
       @note.save
 
@@ -25,8 +24,7 @@ module Dsj
     end
 
     def edit
-      @note = Note.find(params[:id])
-      authorize!(:update, @note)
+      authorize!(:update, note)
 
       respond_to do |format|
         format.html
