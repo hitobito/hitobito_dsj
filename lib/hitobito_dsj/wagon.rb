@@ -28,8 +28,9 @@ module HitobitoDsj
       PersonReadables.send :include, Dsj::PersonReadables
 
       # models
-      Group.send        :include, Dsj::Group
-      Person.send       :include, Dsj::Person
+      Group.send                           :include, Dsj::Group
+      Person.send                          :include, Dsj::Person
+      Event::ParticipationContactData.send :include, Dsj::Event::ParticipationContactData
 
       # serializers
       GroupSerializer.send :include, Dsj::GroupSerializer
@@ -37,7 +38,9 @@ module HitobitoDsj
 
       # controllers
       PeopleController.permitted_attrs += [:function, :website, :contact_number, :salutation,
-                                           :salutation_addition, :financial_support]
+                                           :salutation_addition, :financial_support,
+                                           :correspondence_language, :political_party,
+                                           :current_secondary_appointment]
       NotesController.send :include, Dsj::NotesController
 
       # exports

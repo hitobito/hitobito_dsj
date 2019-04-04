@@ -1,0 +1,25 @@
+-#  Copyright (c) 2019, Dachverband Schweizer Jugendparlamente. This file is part of
+-#  hitobito_dsj and licensed under the Affero General Public License version 3
+-#  or later. See the COPYING file at the top-level directory or at
+-#  https://github.com/hitobito/hitobito_dsj.
+
+= render_attrs(entry, :contact_number, :salutation, :salutation_addition, :correspondence_language, :financial_support)
+-# = render_attrs(entry, :political_party, :current_secondary_appointment)
+= field_set_tag do
+  - if entry.show_attr?(:contact_number)
+    = f.labeled_input_field :contact_number
+  - if entry.show_attr?(:salutation)
+    = f.labeled_collection_select :salutation, Salutation.available, :first, :last, { include_blank: true }, class: 'span6'
+  - if entry.show_attr?(:salutation_addition)
+    = f.labeled_input_field :salutation_addition
+  - if entry.show_attr?(:correspondence_language)
+    = f.labeled_collection_select(:correspondence_language,
+                                  Settings.application.correspondence_language.to_hash,
+                                  :first,
+                                  :last,
+                                  { prompt: true },
+                                  class: 'span6')
+
+= field_set_tag do
+  - [:political_party, :current_secondary_appointment].each do |a|
+    = f.labeled_input_field(a) if entry.show_attr?(a)
