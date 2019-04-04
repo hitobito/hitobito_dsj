@@ -31,6 +31,7 @@ module HitobitoDsj
       Group.send                           :include, Dsj::Group
       Person.send                          :include, Dsj::Person
       Event::ParticipationContactData.send :include, Dsj::Event::ParticipationContactData
+      PhoneNumber.send                     :include, Dsj::PhoneNumber
 
       # serializers
       GroupSerializer.send :include, Dsj::GroupSerializer
