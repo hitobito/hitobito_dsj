@@ -1,6 +1,7 @@
 class AddNormalizedNumberToPhoneNumbers < ActiveRecord::Migration
   def change
     add_column :phone_numbers, :normalized, :string
+    PhoneNumber.reset_column_information
 
     reversible do |dirs|
       dirs.up do
