@@ -1,6 +1,11 @@
 require 'spec_helper'
 
 describe PhoneNumber do
+
+  it 'is extended in wagon' do
+    expect(subject).to be_a Dsj::PhoneNumber
+  end
+
   it 'stores the number normalized for more consistent searching' do
     expect(subject).to respond_to :normalized
   end
