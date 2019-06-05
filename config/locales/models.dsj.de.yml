@@ -27,6 +27,9 @@ de:
       group/dachverband_projektgruppe:
         one: Projektgruppe
         other: Projektgruppen
+      group/jugendparlament_status_verwaltung:
+        one: Jupa Status Verwaltung
+        other: Jupa Stati Verwaltung
       group/jugendparlament_status:
         one: Jupa Status
         other: Jupa Stati
@@ -93,6 +96,9 @@ de:
       group/jugendparlament_projektgruppe/mitglied:
         one: Mitglied
         other: Mitglieder
+      group/jugendparlament_status_verwaltung/adressverwaltung:
+        one: Adressverwalter/-in
+        other: Adressvewalter/-innen
       group/jugendparlament_status/adressverwaltung:
         one: Adressverwalter/-in
         other: Adressvewalter/-innen

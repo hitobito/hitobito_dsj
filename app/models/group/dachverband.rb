@@ -12,7 +12,7 @@ class Group::Dachverband < Group
 
   children Group::DachverbandIntern,
            Group::DachverbandExterneKontakte,
-           Group::JugendparlamentStatus
+           Group::JugendparlamentStatusVerwaltung
 
   ### ROLES
 
