@@ -23,4 +23,8 @@ module GroupsDsjHelper
     group.state_label
   end
 
+  def format_group_supervision_kind(group)
+    group.supervision_kind_label
+  end
+
 end

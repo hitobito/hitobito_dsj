@@ -3,6 +3,9 @@
 -#  or later. See the COPYING file at the top-level directory or at
 -#  https://github.com/hitobito/hitobito_dsj.
 
-= render_attrs(entry, *entry.used_attributes(:founding_year, :language, :area, :legal_form, :budget,
-  :financial_backer, :members_count, :members_age, :political_competences, :supervision, :state, :member,
+= render_attrs(entry, *entry.used_attributes(:founding_year, :language, :area,
+  :legal_form, :budget, :financial_backer, :members_count, :members_age,
+  :political_competences, :competence_initiative, :competence_consultation,
+  :competence_council_meeting, :competence_other, :competence_none,
+  :competence_unknown, :supervision, :supervision_kind, :state, :member,
   :joining_year, :visited_events, :contact_history, :last_contact, :remarks))

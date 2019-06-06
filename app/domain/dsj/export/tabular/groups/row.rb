@@ -25,5 +25,9 @@ module Dsj::Export::Tabular::Groups
       entry.state_label if entry.state
     end
 
+    def supervision_kind
+      entry.supervision_kind_label
+    end
+
   end
 end

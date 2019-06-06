@@ -114,7 +114,14 @@ de:
         members_count: Anzahl Mitglieder
         members_age: Alter Mitglieder
         political_competences: Politische Kompetenzen
+        competence_initiative: Vorstossrecht
+        competence_consultation: Beratung
+        competence_council_meeting: Teilnahme an Ratssitzungen
+        competence_other: andere Rechte
+        competence_none: Keine speziellen Rechte
+        competence_unknown: Keine Angabe
         supervision: Begleitung
+        supervision_kind: Begleitungsart
         state: Status
         member: DSJ-Mitglied
         joining_year: Beitrittsjahr DSJ
@@ -149,6 +156,13 @@ de:
           founding: in Gründung
           interested: gründungsinteressiert
 
+        supervision_kinds:
+          youth: Jugendarbeit
+          political: Gemeindeverwaltung/Politik
+          loose: lose Begleitung
+          none: keine Begleitung
+          unknown: keine Angaben
+
       group/jugendparlament:
         languages:
           _nil: ''
@@ -179,6 +193,13 @@ de:
           on_hold: stillgelegt
           founding: in Gründung
           interested: gründungsinteressiert
+
+        supervision_kinds:
+          youth: Jugendarbeit
+          political: Gemeindeverwaltung/Politik
+          loose: lose Begleitung
+          none: keine Begleitung
+          unknown: keine Angaben
 
       person:
         function: Funktion

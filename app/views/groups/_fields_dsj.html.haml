@@ -17,7 +17,13 @@
 
   = f.labeled_input_fields(*entry.modifiable_attributes(:budget, :financial_backer, :members_count,
                                                         :members_age, :political_competences,
+                                                        :competence_initiative, :competence_consultation,
+                                                        :competence_council_meeting, :competence_other,
+                                                        :competence_none, :competence_unknown,
                                                         :supervision))
+
+  - entry.modifiable_attributes(:supervision_kind).each do |attr|
+    = f.labeled_i18n_enum_field attr, Group::Jugendparlament.supervision_kinds_labels
 
   - entry.modifiable_attributes(:state).each do |attr|
     = f.labeled_i18n_enum_field attr, Group::Jugendparlament.state_labels, prompt: true
