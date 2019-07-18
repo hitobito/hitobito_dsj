@@ -8,10 +8,8 @@
 require 'spec_helper'
 
 describe Person do
-
   context 'salutation' do
-
-    subject { described_class.new(nickname: 'Testino', salutation: 'informal_m_de') }
+    subject { described_class.new(nickname: 'Testino', salutation: 'informal_m_de', correspondence_language: 'de') }
 
     it 'translates salutations' do
       expect(subject.salutation).to eq 'informal_m_de'
@@ -41,7 +39,26 @@ describe Person do
       end
 
     end
-
   end
 
+  context 'correspondence_language' do
+    subject { described_class.new(nickname: 'Testino', correspondence_language: 'de') }
+
+    it 'is mandatory' do
+      subject.correspondence_language = nil
+      expect(subject).to_not be_valid
+    end
+
+    it 'unknown languages are invalid' do
+      subject.correspondence_language = 'ja'
+      expect(subject).to_not be_valid
+    end
+
+    it 'known languages are valid' do
+      %w(de it fr en rm).each do |language|
+        subject.correspondence_language = language
+        expect(subject).to be_valid
+      end
+    end
+  end
 end

@@ -11,13 +11,15 @@ describe PersonAbility do
 
   subject { ability }
   let(:ability) { Ability.new(role.person.reload) }
+  let(:person)  { Fabricate(:person_with_language) }
+  let(:leiter)  { Fabricate(:person_with_language) }
 
   context :show do
     let(:group) { Fabricate(Group::JugendparlamentMitglieder.name, parent: groups(:jupa_be_mitglieder)) }
-    let(:mitglied) { Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group).person }
+    let(:mitglied) { Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group, person: person).person }
 
     context 'mitarbeiter' do
-      let(:role) { Fabricate(Group::DachverbandGeschaeftsstelle::Mitarbeiter.name, group: groups(:dachverband_gs)) }
+      let(:role) { Fabricate(Group::DachverbandGeschaeftsstelle::Mitarbeiter.name, group: groups(:dachverband_gs), person: leiter) }
 
       it 'may see mitglied' do
         is_expected.to be_able_to(:show, mitglied)
@@ -27,8 +29,8 @@ describe PersonAbility do
 
   context 'group-permissions' do
     let(:group)    { groups(:dachverband_projektgruppe) }
-    let(:mitglied) { Fabricate(Group::DachverbandProjektgruppe::Mitglied.name, group: group).person }
-    let(:role)     { Fabricate(Group::DachverbandProjektgruppe::Leitung.name, group: group) }
+    let(:mitglied) { Fabricate(Group::DachverbandProjektgruppe::Mitglied.name, group: group, person: person).person }
+    let(:role)     { Fabricate(Group::DachverbandProjektgruppe::Leitung.name, group: group, person: leiter) }
 
     it 'may see mitglieds notes' do
       is_expected.to be_able_to(:index_notes, mitglied)

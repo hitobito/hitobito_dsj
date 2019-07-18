@@ -34,8 +34,7 @@ module Dsj::Person
               inclusion: {
                 in: lambda do |_|
                   Settings.application.correspondence_languages.to_hash.keys.map(&:to_s)
-                end,
-                allow_blank: true
+                end
               }
   end
 

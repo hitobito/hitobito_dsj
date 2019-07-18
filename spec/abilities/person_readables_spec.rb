@@ -11,7 +11,7 @@ describe PersonReadables do
 
   context 'Mitarbeiter' do
 
-    let(:role)  { Fabricate(Group::DachverbandGeschaeftsstelle::Mitarbeiter.name, group: groups(:dachverband_gs)) }
+    let(:role)  { Fabricate(Group::DachverbandGeschaeftsstelle::Mitarbeiter.name, group: groups(:dachverband_gs), person: people(:leader)) }
     let(:user)  { role.person.reload }
     let(:group) { groups(:jupa_be_mitglieder) }
 
@@ -21,7 +21,7 @@ describe PersonReadables do
       let(:ability) { PersonReadables.new(user, group) }
 
       it 'may see people' do
-        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
+        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group, person: people(:member))
         is_expected.to include(other.person)
       end
     end
@@ -31,7 +31,7 @@ describe PersonReadables do
       let(:ability) { PersonReadables.new(user, group) }
 
       it 'may see people' do
-        other = Fabricate(role.class.name, group: group)
+        other = Fabricate(role.class.name, group: group, person: people(:member))
         is_expected.to include(other.person)
       end
     end
@@ -40,7 +40,7 @@ describe PersonReadables do
       let(:ability) { PersonReadables.new(user, nil) }
 
       it 'may see people' do
-        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
+        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group, person: people(:member))
         is_expected.to include(other.person)
       end
     end
@@ -48,7 +48,7 @@ describe PersonReadables do
 
   context 'Vorstandsmitglied' do
 
-    let(:role)  { Fabricate(Group::DachverbandVorstand::Vorstandsmitglied.name, group: groups(:dachverband_vorstand)) }
+    let(:role)  { Fabricate(Group::DachverbandVorstand::Vorstandsmitglied.name, group: groups(:dachverband_vorstand), person: people(:leader)) }
     let(:user)  { role.person.reload }
     let(:group) { groups(:jupa_be_mitglieder) }
 
@@ -58,7 +58,7 @@ describe PersonReadables do
       let(:ability) { PersonReadables.new(user, group) }
 
       it 'may see people' do
-        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
+        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group, person: people(:member))
         is_expected.to include(other.person)
       end
     end
@@ -68,7 +68,7 @@ describe PersonReadables do
       let(:ability) { PersonReadables.new(user, group) }
 
       it 'may see people' do
-        other = Fabricate(role.class.name, group: group)
+        other = Fabricate(role.class.name, group: group, person: people(:member))
         is_expected.to include(other.person)
       end
     end
@@ -77,7 +77,7 @@ describe PersonReadables do
       let(:ability) { PersonReadables.new(user, nil) }
 
       it 'may see people' do
-        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group)
+        other = Fabricate(Group::JugendparlamentMitglieder::Mitglied.name, group: group, person: people(:member))
         is_expected.to include(other.person)
       end
     end
