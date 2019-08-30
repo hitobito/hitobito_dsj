@@ -49,7 +49,6 @@ module HitobitoDsj
       Export::Tabular::People::PeopleAddress.send(
         :include, Dsj::Export::Tabular::People::PeopleAddress
       )
-      Export::Tabular::People::PeopleFull.send :include, Dsj::Export::Tabular::People::PeopleFull
       Export::Tabular::People::PersonRow.send :include, Dsj::Export::Tabular::People::PersonRow
 
     end
