@@ -26,7 +26,7 @@ module Dsj::Export::Tabular::Groups
     end
 
     def supervision_kind
-      entry.supervision_kind_label
+      entry.try(:supervision_kind_label)
     end
 
   end
