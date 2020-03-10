@@ -5,6 +5,8 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
+module GroupIndex; end
+
 ThinkingSphinx::Index.define_partial :group do
   indexes contact_history, remarks
 end
