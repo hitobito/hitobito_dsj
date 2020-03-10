@@ -1,4 +1,4 @@
-class DefaultPrivateForSocialAccounts < ActiveRecord::Migration
+class DefaultPrivateForSocialAccounts < ActiveRecord::Migration[4.2]
 
   def up
     change_column_default :social_accounts, :public, false

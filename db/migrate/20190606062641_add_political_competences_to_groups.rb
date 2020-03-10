@@ -1,4 +1,4 @@
-class AddPoliticalCompetencesToGroups < ActiveRecord::Migration
+class AddPoliticalCompetencesToGroups < ActiveRecord::Migration[4.2]
   def change
     bool_defaults = { null: false, default: false }
 

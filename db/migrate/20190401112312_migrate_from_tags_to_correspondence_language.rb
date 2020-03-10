@@ -1,4 +1,4 @@
-class MigrateFromTagsToCorrespondenceLanguage < ActiveRecord::Migration
+class MigrateFromTagsToCorrespondenceLanguage < ActiveRecord::Migration[4.2]
   def change
     add_column :people, :correspondence_language, :string, limit: 5
 

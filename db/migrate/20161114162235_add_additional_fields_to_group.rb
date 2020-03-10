@@ -1,4 +1,4 @@
-class AddAdditionalFieldsToGroup < ActiveRecord::Migration
+class AddAdditionalFieldsToGroup < ActiveRecord::Migration[4.2]
   def change
     add_column :groups, :remarks, :text
     add_column :groups, :members_count, :string

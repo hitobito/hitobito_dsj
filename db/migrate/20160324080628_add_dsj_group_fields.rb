@@ -1,4 +1,4 @@
-class AddDsjGroupFields < ActiveRecord::Migration
+class AddDsjGroupFields < ActiveRecord::Migration[4.2]
   def change
     add_column :groups, :founding_year, :integer
     add_column :groups, :language, :string

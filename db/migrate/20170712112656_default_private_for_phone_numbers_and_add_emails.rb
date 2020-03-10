@@ -1,4 +1,4 @@
-class DefaultPrivateForPhoneNumbersAndAddEmails < ActiveRecord::Migration
+class DefaultPrivateForPhoneNumbersAndAddEmails < ActiveRecord::Migration[4.2]
 
   def up
     change_column_default :phone_numbers, :public, false

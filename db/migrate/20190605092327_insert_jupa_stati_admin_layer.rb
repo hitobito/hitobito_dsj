@@ -1,4 +1,4 @@
-class InsertJupaStatiAdminLayer < ActiveRecord::Migration
+class InsertJupaStatiAdminLayer < ActiveRecord::Migration[4.2]
   def up
     root = Group.roots.first
     admin_layer = nil

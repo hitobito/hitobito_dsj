@@ -1,4 +1,4 @@
-class AddDsjPersonFields < ActiveRecord::Migration
+class AddDsjPersonFields < ActiveRecord::Migration[4.2]
   def change
     add_column :people, :function, :string
     add_column :people, :contact_number, :string

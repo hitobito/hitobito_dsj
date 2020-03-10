@@ -1,4 +1,4 @@
-class AddNormalizedNumberToPhoneNumbers < ActiveRecord::Migration
+class AddNormalizedNumberToPhoneNumbers < ActiveRecord::Migration[4.2]
   def change
     add_column :phone_numbers, :normalized, :string
     PhoneNumber.reset_column_information
