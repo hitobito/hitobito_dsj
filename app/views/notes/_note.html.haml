@@ -24,7 +24,7 @@
         - if note.subject.is_a? Person
           = link_to icon(:edit), edit_group_person_note_path(@group, note.subject, note)
       - if can?(:destroy, note)
-        = link_to icon(:trash),
+        = link_to icon(:'trash-alt', filled: false),
                   note_path(@group, note),
                   method: :delete,
                   remote: true,
