@@ -52,3 +52,5 @@ office = Group.find_by(name: "Geschäftsstelle")
 devs.each do |name, email|
   seeder.seed_developer(name, email, office, Group::DachverbandGeschaeftsstelle::Mitarbeiter)
 end
+
+seeder.assign_role_to_root(office, Group::DachverbandGeschaeftsstelle::Mitarbeiter)
