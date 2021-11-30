@@ -4,6 +4,9 @@ it:
       group/dachverband:
         one: Federazione
         other: Federazioni
+      group/dachverband_intern:
+        one: Interno
+        other: Interno
       group/dachverband_geschaeftsstelle:
         one: Ufficio
         other: Uffici
@@ -13,12 +16,15 @@ it:
       group/dachverband_externe_kontakte:
         one: Contatto esterno
         other: Contatti esterni
+      group/dachverband_projektgruppe:
+        one: Gruppo di lavoro
+        other: Gruppi di lavoro
+      group/jugendparlament_status:
+        one: Stato
+        other: Stati
       group/dachverband_gremium:
         one: 'Commissione '
         other: Commissioni
-      group/jugendparlament_status:
-        one: Status PG
-        other: Status PG
       group/jugendparlament:
         one: Parlamento dei Giovani
         other: Parlamenti dei Giovani
@@ -34,68 +40,42 @@ it:
       group/jugendparlament_externe_kontakte:
         one: Contatto esterno
         other: Contatti esterni
-      group/easyvote:
-        one: easyvote
-        other: easyvote
-      group/easyvote_abonnenten:
-        one: Abbonato
-        other: Abbonati
-      group/easyvote_community:
-        one: Community
-        other: Communities
-      group/easyvote_externe_kontakte:
-        one: Contatto esterno
-        other: Contatti esterni
-      group/dachverband/adressverwaltung:
-        one: Gestione degli indirizzi
+      group/jugendparlament_projektgruppe:
+        one: Gruppo di lavoro
+        other: Gruppi di lavoro
       group/dachverband_geschaeftsstelle/mitarbeiter:
         one: Collaboratore/trice
+        other: Collaboratore/trice
       group/dachverband_vorstand/vorstandsmitglied:
         one: Membro del comitato
-      group/dachverband_externe_kontakte/adressverwaltung:
-        one: Gestione degli indirizzi
+        other: Membro del comitato
       group/dachverband_externe_kontakte/kontakt:
         one: Contatto
-      group/dachverband_gremium/leitung:
+        other: Contatto
+      group/dachverband_projektgruppe/leitung:
         one: Direzione
-      group/dachverband_gremium/mitglied:
+        other: Direzioni
+      group/dachverband_projektgruppe/mitglied:
         one: Membro
-      group/jugendparlament/adressverwaltung:
-        one: Gestione degli indirizzi
-      group/jugendparlament/rechnungsadresse:
-        one: Indirizzo di fatturazione
-      group/jugendparlament/lieferadresse:
-        one: Indirizzo di spedizione
+        other: Membri
       group/jugendparlament_leitung/praesidium:
         one: Presidenza
-      group/jugendparlament_leitung/co_praesidium:
-        one: Co-presidenza
-      group/jugendparlament_leitung/adressverwaltung:
-        one: Gestione degli indirizzi
+        other: Presidenza
       group/jugendparlament_vorstand/vorstandsmitglied:
         one: Membro del comitato
-      group/jugendparlament_mitglieder/adressverwaltung:
-        one: Gestione degli indirizzi
+        other: Membro del comitato
       group/jugendparlament_mitglieder/mitglied:
         one: Membro
-      group/jugendparlament_externe_kontakte/adressverwaltung:
-        one: Gestione degli indirizzi
+        other: Membri
       group/jugendparlament_externe_kontakte/kontakt:
         one: Contatto
-      group/easyvote/adressverwaltung:
-        one: Gestione degli indirizzi
-      group/easyvote_abonnenten/adressverwaltung:
-        one: Gestione degli indirizzi
-      group/easyvote_abonnenten/abonnent:
-        one: Abbonato/Abbonata
-      group/easyvote_community/adressverwaltung:
-        one: Gestione degli indirizzi
-      group/easyvote_community/communitymitglied:
-        one: Membro della community
-      group/easyvote_externe_kontakte/adressverwaltung:
-        one: Gestione degli indirizzi
-      group/easyvote_externe_kontakte/kontakt:
-        one: Contatto
+        other: Contatto
+      group/jugendparlament_projektgruppe/leitung:
+        one: Direzione
+        other: Direzioni
+      group/jugendparlament_projektgruppe/mitglied:
+        one: Membro
+        other: Membri
     attributes:
       group:
         founding_year: Anno di creazione
@@ -117,10 +97,11 @@ it:
           it: Italiano
           de_fr: Bilingue (ita/tede)
         areas:
-          local: locale
+          local: comunale
           regional: regionale
           cantonal: cantonale
           federal: nazionale
+          other: altro
         legal_forms:
           public: di diritto pubblico
           private: di diritto privato
@@ -139,10 +120,11 @@ it:
           it: Italiano
           de_fr: Bilingue (ita/tede)
         areas:
-          local: locale
+          local: comunale
           regional: regionale
           cantonal: cantonale
           federal: nazionale
+          other: altro
         legal_forms:
           public: di diritto pubblico
           private: di diritto privato

@@ -4,6 +4,9 @@ fr:
       group/dachverband:
         one: Fédération
         other: Fédérations
+      group/dachverband_intern:
+        one: Interne
+        other: Interne
       group/dachverband_geschaeftsstelle:
         one: Bureau
         other: Bureaux
@@ -13,12 +16,15 @@ fr:
       group/dachverband_externe_kontakte:
         one: Contact externe
         other: Contacts externes
+      group/dachverband_projektgruppe:
+        one: Groupe de projet
+        other: Groupes de projet
+      group/jugendparlament_status:
+        one: Statut
+        other: Statut
       group/dachverband_gremium:
         one: Commission
         other: Commissions
-      group/jugendparlament_status:
-        one: Statut PJ
-        other: Statuts PJ
       group/jugendparlament:
         one: Parlement des Jeunes
         other: Parlements des Jeunes
@@ -34,68 +40,42 @@ fr:
       group/jugendparlament_externe_kontakte:
         one: Contact externe
         other: Contacts externes
-      group/easyvote:
-        one: Easyvote
-        other: Easyvote
-      group/easyvote_abonnenten:
-        one: Abonné
-        other: Abonnés
-      group/easyvote_community:
-        one: Communeauté
-        other: Communeautés
-      group/easyvote_externe_kontakte:
-        one: Contact externe
-        other: Contacts externes
-      group/dachverband/adressverwaltung:
-        one: Gestion des adresses
+      group/jugendparlament_projektgruppe:
+        one: Groupe de projet
+        other: Groupes de projet
       group/dachverband_geschaeftsstelle/mitarbeiter:
         one: Collaborateur/trice
+        other: Collaborateur/trice
       group/dachverband_vorstand/vorstandsmitglied:
         one: Membre du comité
-      group/dachverband_externe_kontakte/adressverwaltung:
-        one: Gestion des adresses
+        other: Membre du comité
       group/dachverband_externe_kontakte/kontakt:
         one: Contact
-      group/dachverband_gremium/leitung:
+        other: Contact
+      group/dachverband_projektgruppe/leitung:
         one: Direction
-      group/dachverband_gremium/mitglied:
+        other: Directions
+      group/dachverband_projektgruppe/mitglied:
         one: Membre
-      group/jugendparlament/adressverwaltung:
-        one: Gestion des adresses
-      group/jugendparlament/rechnungsadresse:
-        one: Adresse de facturation
-      group/jugendparlament/lieferadresse:
-        one: Adresse de livraison
+        other: Membres
       group/jugendparlament_leitung/praesidium:
         one: Présidence
-      group/jugendparlament_leitung/co_praesidium:
-        one: Co-Présidence
-      group/jugendparlament_leitung/adressverwaltung:
-        one: Gestion des adresses
+        other: Présidence
       group/jugendparlament_vorstand/vorstandsmitglied:
         one: Membre du comité
-      group/jugendparlament_mitglieder/adressverwaltung:
-        one: Gestion des adresses
+        other: Membre du comité
       group/jugendparlament_mitglieder/mitglied:
         one: Membre
-      group/jugendparlament_externe_kontakte/adressverwaltung:
-        one: Gestion des adresses
+        other: Membres
       group/jugendparlament_externe_kontakte/kontakt:
         one: Contact
-      group/easyvote/adressverwaltung:
-        one: Gestion des adresses
-      group/easyvote_abonnenten/adressverwaltung:
-        one: Gestion des adresses
-      group/easyvote_abonnenten/abonnent:
-        one: Abonné/e
-      group/easyvote_community/adressverwaltung:
-        one: Gestion des adresses
-      group/easyvote_community/communitymitglied:
-        one: Membre d'une communeauté
-      group/easyvote_externe_kontakte/adressverwaltung:
-        one: Gestion des adresses
-      group/easyvote_externe_kontakte/kontakt:
-        one: Contact
+        other: Contacts
+      group/jugendparlament_projektgruppe/leitung:
+        one: Direction
+        other: Directions
+      group/jugendparlament_projektgruppe/mitglied:
+        one: Membre
+        other: Membres
     attributes:
       group:
         founding_year: Année de création
@@ -104,6 +84,7 @@ fr:
         legal_form: Base légale
         budget: Budget
         financial_backer: Bailleur(s) de fonds
+        members_count: Nombre de participants
         members_age: Age des membres
         political_competences: Compétences politiques
         supervision: Accompagnement
@@ -111,16 +92,20 @@ fr:
         member: Membre de la FSPJ
         joining_year: Année d'adhésion à la FSPJ
         visited_events: Evénements FSPJ visités
+        contact_history: Historique de contact
+        last_contact: Dernier contact
+        remarks: Remarques
         languages:
           de: Allemand
           fr: Français
           it: Italien
           de_fr: Bilingue (all/fr)
         areas:
-          local: Local
+          local: communal
           regional: Régional
           cantonal: Cantonal
           federal: National
+          other: Autre
         legal_forms:
           public: De droit public
           private: De droit privé
@@ -139,10 +124,11 @@ fr:
           it: Italien
           de_fr: Bilingue (fr/all)
         areas:
-          local: Local
+          local: Communal
           regional: Régional
           cantonal: Cantonal
           federal: National
+          other: Autre
         legal_forms:
           public: De droit public
           private: De droit privé
