@@ -11,7 +11,7 @@ module Dsj::Person
   included do
     # Define additional used attributes
     Person::PUBLIC_ATTRS << :function << :website << :contact_number << :salutation <<
-        :salutation_addition << :financial_support << :correspondence_language <<
+        :salutation_addition << :financial_support <<
         :political_party << :current_secondary_appointment
 
     Person::SALUTATIONS = [
@@ -32,12 +32,6 @@ module Dsj::Person
     ].freeze
 
     validates :salutation, inclusion: Person::SALUTATIONS.map { |k, _| k.to_s }, allow_blank: true
-    validates :correspondence_language,
-              inclusion: {
-                in: lambda do |_|
-                  Settings.application.correspondence_languages.to_hash.keys.map(&:to_s)
-                end
-              }
   end
 
   def salutation_label

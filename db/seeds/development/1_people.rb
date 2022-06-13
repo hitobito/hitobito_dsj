@@ -20,7 +20,7 @@ class DsjPersonSeeder < PersonSeeder
 
   def standard_attributes(*args)
     super.merge({
-      correspondence_language: 'de',
+      language: 'de',
     })
   end
 end

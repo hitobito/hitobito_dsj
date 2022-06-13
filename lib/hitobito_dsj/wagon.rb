@@ -40,7 +40,7 @@ module HitobitoDsj
       # controllers
       PeopleController.permitted_attrs += [:function, :website, :contact_number, :salutation,
                                            :salutation_addition, :financial_support,
-                                           :correspondence_language, :political_party,
+                                           :political_party,
                                            :current_secondary_appointment]
       NotesController.send :include, Dsj::NotesController
 

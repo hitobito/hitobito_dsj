@@ -8,7 +8,7 @@ module Dsj::Event::ParticipationContactData
 
   included do
     Event::ParticipationContactData.contact_attrs << :contact_number <<
-      :salutation << :salutation_addition << :correspondence_language <<
+      :salutation << :salutation_addition << :language <<
       :political_party << :current_secondary_appointment
 
     delegate(*Event::ParticipationContactData.contact_attrs, to: :person)

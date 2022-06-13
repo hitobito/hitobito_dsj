@@ -15,7 +15,7 @@ module Dsj::PersonSerializer
 
     extension(:details) do |_|
       map_properties :contact_number, :salutation, :salutation_addition,
-                     :correspondence_language, :financial_support,
+                     :language, :financial_support,
                      :political_party, :current_secondary_appointment
       property :salutation, item.salutation_label
     end

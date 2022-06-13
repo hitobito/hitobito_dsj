@@ -17,7 +17,7 @@ module Dsj::Export::Tabular::People
     def person_attributes_with_dsj
       person_attributes_without_dsj +
         [:function, :website, :contact_number, :salutation, :salutation_addition] +
-        [:correspondence_language, :political_party, :current_secondary_appointment]
+        [:language, :political_party, :current_secondary_appointment]
     end
 
   end
