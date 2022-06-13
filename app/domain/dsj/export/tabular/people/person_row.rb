@@ -12,12 +12,5 @@ module Dsj::Export::Tabular::People
       entry.salutation_label
     end
 
-    def correspondence_language
-      lang = entry.correspondence_language
-      if lang
-        Settings.application.correspondence_languages.to_hash.with_indifferent_access[lang]
-      end
-    end
-
   end
 end

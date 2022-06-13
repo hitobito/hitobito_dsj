@@ -17,7 +17,7 @@ unless dachverband.address.present?
   dachverband.update_columns(seeder.group_attributes)
 
   dachverband.default_children.each do |child_class|
-    child_class.first.update_attributes(seeder.group_attributes)
+    child_class.first.update!(seeder.group_attributes)
   end
 end
 

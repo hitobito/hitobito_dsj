@@ -4,5 +4,5 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 Fabricator(:person_with_language, from: :person) do
-  correspondence_language { 'de' }
+  language { 'de' }
 end

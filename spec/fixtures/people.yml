@@ -10,7 +10,7 @@ admin:
   gender: m
   contact_data_visible: true
   primary_group: dachverband_gs
-  correspondence_language: de
+  language: de
 
 leader:
   first_name: A
@@ -18,11 +18,11 @@ leader:
   email: a.leader@hitobito.example.com
   contact_data_visible: true
   primary_group: dachverband
-  correspondence_language: de
+  language: de
 
 member:
   first_name: My
   last_name: Member
   email: member0@hitobito.example.com
   primary_group: jupa_be_mitglieder
-  correspondence_language: de
+  language: de
