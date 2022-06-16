@@ -1,6 +1,6 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
-#  Copyright (c) 2019, Dachverband Schweizer Jugendparlamente. This file is part of
+#  Copyright (c) 2022, Dachverband Schweizer Jugendparlamente. This file is part of
 #  hitobito_dsj and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
@@ -11,6 +11,8 @@ module Dsj
 
     included do
       helper_method :subject_path, :update_path
+
+      prepend_before_action :group, only: [:edit]
     end
 
     def update
