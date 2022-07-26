@@ -3,78 +3,103 @@ fr:
     models:
       group/dachverband:
         one: Fédération
+        many: Fédérations
         other: Fédérations
       group/dachverband_intern:
         one: Interne
+        many: Interne
         other: Interne
       group/dachverband_geschaeftsstelle:
         one: Bureau
+        many: Bureaux
         other: Bureaux
       group/dachverband_vorstand:
         one: Comité
+        many: Comités
         other: Comités
       group/dachverband_externe_kontakte:
         one: Contact externe
+        many: Contacts externes
         other: Contacts externes
       group/dachverband_projektgruppe:
         one: Groupe de projet
+        many: Groupes de projet
         other: Groupes de projet
       group/jugendparlament_status:
         one: Statut
+        many: Statut
         other: Statut
       group/dachverband_gremium:
         one: Commission
+        many: Commissions
         other: Commissions
       group/jugendparlament:
         one: Parlement des Jeunes
+        many: Parlements des Jeunes
         other: Parlements des Jeunes
       group/jugendparlament_leitung:
         one: Direction
+        many: Directions
         other: Directions
       group/jugendparlament_vorstand:
         one: Comité
+        many: Comités
         other: Comités
       group/jugendparlament_mitglieder:
         one: Membre
+        many: Membres
         other: Membres
       group/jugendparlament_externe_kontakte:
         one: Contact externe
+        many: Contacts externes
         other: Contacts externes
       group/jugendparlament_projektgruppe:
         one: Groupe de projet
+        many: Groupes de projet
         other: Groupes de projet
       group/dachverband_geschaeftsstelle/mitarbeiter:
         one: Collaborateur/trice
+        many: Collaborateur/trice
         other: Collaborateur/trice
       group/dachverband_vorstand/vorstandsmitglied:
         one: Membre du comité
+        many: Membre du comité
         other: Membre du comité
       group/dachverband_externe_kontakte/kontakt:
         one: Contact
+        many: Contact
         other: Contact
       group/dachverband_projektgruppe/leitung:
         one: Direction
+        many: Directions
         other: Directions
       group/dachverband_projektgruppe/mitglied:
         one: Membre
+        many: Membres
         other: Membres
       group/jugendparlament_leitung/praesidium:
         one: Présidence
+        many: Présidence
         other: Présidence
       group/jugendparlament_vorstand/vorstandsmitglied:
         one: Membre du comité
+        many: Membre du comité
         other: Membre du comité
       group/jugendparlament_mitglieder/mitglied:
         one: Membre
+        many: Membres
         other: Membres
       group/jugendparlament_externe_kontakte/kontakt:
         one: Contact
+        many: Contacts
         other: Contacts
       group/jugendparlament_projektgruppe/leitung:
         one: Direction
+        many: Directions
         other: Directions
       group/jugendparlament_projektgruppe/mitglied:
         one: Membre
+        many: Membres
         other: Membres
     attributes:
       group:
