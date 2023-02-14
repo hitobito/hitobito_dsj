@@ -1,13 +1,12 @@
 [main]
 host = https://www.transifex.com
-type = YML
 
-[hitobito_dsj.models-dsj]
+[o:hitobito:p:hitobito_dsj:r:models-dsj]
 file_filter = config/locales/models.dsj.<lang>.yml
 source_file = config/locales/models.dsj.de.yml
 source_lang = de
 
-[hitobito_dsj.views-dsj]
+[o:hitobito:p:hitobito_dsj:r:views-dsj]
 file_filter = config/locales/views.dsj.<lang>.yml
 source_file = config/locales/views.dsj.de.yml
 source_lang = de
