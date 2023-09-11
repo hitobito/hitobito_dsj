@@ -58,6 +58,15 @@ module HitobitoDsj
       Settings.reload!
     end
 
+    initializer 'dsj.add_public_files' do |_app|
+      public_assets = ['robots.txt']
+      public_assets.each do |asset|
+        source = HitobitoDsj::Wagon.root.join('public', asset)
+        dest = Rails.root.join('public', asset)
+        FileUtils.copy_file source, dest
+      end
+    end
+
     initializer 'dsj.add_inflections' do |_app|
       ActiveSupport::Inflector.inflections do |inflect|
         # inflect.irregular 'census', 'censuses'
