@@ -2,6 +2,8 @@ class MigrateFromTagsToCorrespondenceLanguage < ActiveRecord::Migration[4.2]
   def change
     add_column :people, :correspondence_language, :string, limit: 5
 
+    return true if Person.none?
+
     reversible do |dir|
       dir.up do
         say_with_time 'Transfer language-tag to new column' do
