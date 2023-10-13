@@ -1,6 +1,6 @@
-# encoding: utf-8
+# frozen_string_literal: true
 
-#  Copyright (c) 2012-2016, Dachverband Schweizer Jugendparlamente. This file is part of
+#  Copyright (c) 2012-2023, Dachverband Schweizer Jugendparlamente. This file is part of
 #  hitobito_dsj and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
@@ -23,33 +23,31 @@ module HitobitoDsj
       # extend application classes here
 
       # abilities
-      NoteAbility.send :include, Dsj::NoteAbility
-      PersonAbility.send :include, Dsj::PersonAbility
-      PersonReadables.send :include, Dsj::PersonReadables
+      NoteAbility.include Dsj::NoteAbility
+      PersonAbility.include Dsj::PersonAbility
+      PersonReadables.include Dsj::PersonReadables
 
       # models
-      Group.send                           :include, Dsj::Group
-      Person.send                          :include, Dsj::Person
-      Event::ParticipationContactData.send :include, Dsj::Event::ParticipationContactData
-      PhoneNumber.send                     :include, Dsj::PhoneNumber
+      Group.include Dsj::Group
+      Person.include Dsj::Person
+      Event::ParticipationContactData.include Dsj::Event::ParticipationContactData
+      PhoneNumber.include Dsj::PhoneNumber
 
       # serializers
-      GroupSerializer.send :include, Dsj::GroupSerializer
-      PersonSerializer.send :include, Dsj::PersonSerializer
+      GroupSerializer.include Dsj::GroupSerializer
+      PersonSerializer.include Dsj::PersonSerializer
 
       # controllers
       PeopleController.permitted_attrs += [:function, :website, :contact_number, :salutation,
                                            :salutation_addition, :financial_support,
                                            :political_party,
                                            :current_secondary_appointment]
-      NotesController.send :include, Dsj::NotesController
+      NotesController.include Dsj::NotesController
 
       # exports
-      Export::Tabular::Groups::Row.send :include, Dsj::Export::Tabular::Groups::Row
-      Export::Tabular::People::PeopleAddress.send(
-        :include, Dsj::Export::Tabular::People::PeopleAddress
-      )
-      Export::Tabular::People::PersonRow.send :include, Dsj::Export::Tabular::People::PersonRow
+      Export::Tabular::Groups::Row.include Dsj::Export::Tabular::Groups::Row
+      Export::Tabular::People::PeopleAddress.include Dsj::Export::Tabular::People::PeopleAddress
+      Export::Tabular::People::PersonRow.include Dsj::Export::Tabular::People::PersonRow
 
     end
 
