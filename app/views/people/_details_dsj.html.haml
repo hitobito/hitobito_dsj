@@ -4,7 +4,7 @@
 -#  https://github.com/hitobito/hitobito_dsj.
 
 = render_attrs(entry, :contact_number, :salutation, :salutation_addition)
-%dl.dl-horizontal
+%dl.dl-horizontal.dl-borderless.m-0.p-2.border-top
   = labeled(entry.class.human_attribute_name(:financial_support)) do
     %p.multiline= safe_auto_link(entry.financial_support, html: { target: '_blank' })
 
