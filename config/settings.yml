@@ -8,7 +8,7 @@
 # Overrides settings from the main application
 application:
   logo:
-    image: logo.svg
+    image: logo-dsj.png
     height: 100
     width: 300
   languages:
