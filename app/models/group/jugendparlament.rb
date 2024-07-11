@@ -1,38 +1,35 @@
-# encoding: utf-8
-
 #  Copyright (c) 2012-2016, Dachverband Schweizer Jugendparlamente. This file is part of
 #  hitobito_dsj and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
 class Group::Jugendparlament < Group
-
   include I18nEnums
 
-  LANGUAGES = %w(de fr it de_fr).freeze
-  AREAS = %w(local regional cantonal federal other).freeze
-  LEGAL_FORMS = %w(public private).freeze
-  STATES = %w(very_active active little_active passive on_hold founding interested).freeze
-  SUPERVISION_KINDS = %w(youth political loose none unknown).freeze
+  LANGUAGES = %w[de fr it de_fr].freeze
+  AREAS = %w[local regional cantonal federal other].freeze
+  LEGAL_FORMS = %w[public private].freeze
+  STATES = %w[very_active active little_active passive on_hold founding interested].freeze
+  SUPERVISION_KINDS = %w[youth political loose none unknown].freeze
 
   self.layer = true
   self.default_children = [Group::JugendparlamentLeitung,
-                           Group::JugendparlamentVorstand,
-                           Group::JugendparlamentMitglieder]
+    Group::JugendparlamentVorstand,
+    Group::JugendparlamentMitglieder]
 
   self.used_attributes += [:founding_year, :language, :area, :legal_form, :budget,
-                           :financial_backer, :members_age, :political_competences,
-                           :competence_initiative, :competence_consultation,
-                           :competence_council_meeting, :competence_other,
-                           :competence_none, :competence_unknown,
-                           :supervision, :supervision_kind,
-                           :state, :member, :joining_year, :visited_events]
+    :financial_backer, :members_age, :political_competences,
+    :competence_initiative, :competence_consultation,
+    :competence_council_meeting, :competence_other,
+    :competence_none, :competence_unknown,
+    :supervision, :supervision_kind,
+    :state, :member, :joining_year, :visited_events]
 
   children Group::JugendparlamentLeitung,
-           Group::JugendparlamentVorstand,
-           Group::JugendparlamentMitglieder,
-           Group::JugendparlamentExterneKontakte,
-           Group::JugendparlamentProjektgruppe
+    Group::JugendparlamentVorstand,
+    Group::JugendparlamentMitglieder,
+    Group::JugendparlamentExterneKontakte,
+    Group::JugendparlamentProjektgruppe
 
   i18n_enum :language, LANGUAGES
   i18n_enum :area, AREAS
@@ -75,7 +72,7 @@ class Group::Jugendparlament < Group
   private
 
   def create_custom_named_default_children
-    %w(Behörden Alumni).each do |name|
+    %w[Behörden Alumni].each do |name|
       Group::JugendparlamentExterneKontakte.create!(name: name, parent: self)
     end
   end

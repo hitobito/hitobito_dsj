@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 #  Copyright (c) 2012-2016, Dachverband Schweizer Jugendparlamente. This file is part of
 #  hitobito_dsj and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
@@ -7,7 +5,6 @@
 
 module Dsj::Export::Tabular::People
   module PeopleAddress
-
     extend ActiveSupport::Concern
 
     included do
@@ -19,6 +16,5 @@ module Dsj::Export::Tabular::People
         [:function, :website, :contact_number, :salutation, :salutation_addition] +
         [:language, :political_party, :current_secondary_appointment]
     end
-
   end
 end

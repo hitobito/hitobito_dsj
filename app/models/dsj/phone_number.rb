@@ -11,6 +11,6 @@ module Dsj::PhoneNumber
   end
 
   def normalize_number
-    self.normalized = number.gsub(/\D/, '').presence
+    self.normalized = number.gsub(/\D/, "").presence
   end
 end

@@ -5,17 +5,15 @@
 
 module Sheet
   class Note < Base
-
     self.parent_sheet = Sheet::Person
 
     def title
-      I18n.t('notes.actions_edit.title')
+      I18n.t("notes.actions_edit.title")
     end
 
     def current_parent_nav_path
       view.group_people_path(parent_sheet.parent_sheet.entry.id,
-                             parent_sheet.entry.id)
+        parent_sheet.entry.id)
     end
-
   end
 end

@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 #  Copyright (c) 2017, Dachverband Schweizer Jugendparlamente. This file is part of
 #  hitobito_dsj and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
@@ -16,8 +14,8 @@ module Dsj::PersonReadables
   def accessible_people_with_mitarbeiter
     if user_is_mitarbeiter_or_vorstandsmitglied?
       Person.only_public_data
-            .joins(roles: :group)
-            .where(roles: { deleted_at: nil }, groups: { deleted_at: nil })
+        .joins(roles: :group)
+        .where(roles: {deleted_at: nil}, groups: {deleted_at: nil})
     else
       accessible_people_without_mitarbeiter
     end
@@ -36,5 +34,4 @@ module Dsj::PersonReadables
         role.is_a?(Group::DachverbandVorstand::Vorstandsmitglied)
     end
   end
-
 end

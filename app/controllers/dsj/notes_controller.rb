@@ -42,6 +42,5 @@ module Dsj
         group_person_note_path(group_id: group.id, person_id: subject.id, id: @note.id)
       end
     end
-
   end
 end
