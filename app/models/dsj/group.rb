@@ -9,6 +9,9 @@ module Dsj::Group
   included do
     self.used_attributes += [:remarks, :members_count, :contact_history, :last_contact]
 
+    Group::SEARCHABLE_ATTRS << :contact_history << :remarks
+    include PgSearchable
+
     root_types Group::Dachverband
   end
 end
