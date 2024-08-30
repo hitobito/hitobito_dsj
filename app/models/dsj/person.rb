@@ -12,6 +12,11 @@ module Dsj::Person
       :salutation_addition << :financial_support <<
       :political_party << :current_secondary_appointment
 
+    Person::SEARCHABLE_ATTRS[Person::SEARCHABLE_ATTRS.size - 1][:phone_numbers] << :normalized
+    Person::SEARCHABLE_ATTRS[Person::SEARCHABLE_ATTRS.size - 1][:tags] = [:name]
+    Person::SEARCHABLE_ATTRS << :function << :website << :contact_number
+    include PgSearchable
+
     Person::SALUTATIONS = [
       [:formal_f_de, "Sehr geehrte Frau"], [:formal_m_de, "Sehr geehrter Herr"],
       [:semi_formal_f_de, "Liebe Frau"], [:semi_formal_m_de, "Lieber Herr"],
