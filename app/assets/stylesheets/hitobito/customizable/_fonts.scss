@@ -1,0 +1,41 @@
+// frozen_string_literal: true
+
+// Copyright (c) 2024, Dachverband Schweizer Jugendparlamente. This file is part of
+// hitobito_dsj and licensed under the Affero General Public License version 3
+// or later. See the COPYING file at the top-level directory or at
+// https://github.com/hitobito/hitobito_dsj.
+
+@font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 200; /* Light */
+    src: url('../../../fonts/Karla-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 300; /* Regular */
+    src: url('../../../fonts/Karla-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Karla';
+    font-style: italic;
+    font-weight: 400; /* Regular Italic */
+    src: url('../../../fonts/Karla-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 500; /* SemiBold */
+    src: url('../../../fonts/Karla-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 600; /* Bold */
+    src: url('../../../fonts/Karla-Bold.ttf') format('truetype');
+}
