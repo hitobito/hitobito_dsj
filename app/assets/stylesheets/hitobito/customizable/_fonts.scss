@@ -9,33 +9,43 @@
     font-family: 'Karla';
     font-style: normal;
     font-weight: 200; /* Light */
-    src: url('../../../fonts/Karla-Light.ttf') format('truetype');
+    src: url('../../../fonts/Karla-Light.woff2') format('woff2'),
+         url('../../../fonts/Karla-Light.woff') format('woff'),
+         url('../../../fonts/Karla-Light.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Karla';
     font-style: normal;
     font-weight: 300; /* Regular */
-    src: url('../../../fonts/Karla-Regular.ttf') format('truetype');
+    src: url('../../../fonts/Karla-Regular.woff2') format('woff2'),
+         url('../../../fonts/Karla-Regular.woff') format('woff'),
+         url('../../../fonts/Karla-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Karla';
     font-style: italic;
     font-weight: 400; /* Regular Italic */
-    src: url('../../../fonts/Karla-Italic.ttf') format('truetype');
+    src: url('../../../fonts/Karla-Italic.woff2') format('woff2'),
+         url('../../../fonts/Karla-Italic.woff') format('woff'),
+         url('../../../fonts/Karla-Italic.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Karla';
     font-style: normal;
     font-weight: 500; /* SemiBold */
-    src: url('../../../fonts/Karla-SemiBold.ttf') format('truetype');
+    src: url('../../../fonts/Karla-SemiBold.woff2') format('woff2'),
+         url('../../../fonts/Karla-SemiBold.woff') format('woff'),
+         url('../../../fonts/Karla-SemiBold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Karla';
     font-style: normal;
     font-weight: 600; /* Bold */
-    src: url('../../../fonts/Karla-Bold.ttf') format('truetype');
+    src: url('../../../fonts/Karla-Bold.woff2') format('woff2'),
+         url('../../../fonts/Karla-Bold.woff') format('woff'),
+         url('../../../fonts/Karla-Bold.ttf') format('truetype');
 }
