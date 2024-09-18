@@ -3,9 +3,9 @@
 //  or later. See the COPYING file at the top-level directory or at
 //  https://github.com/hitobito/hitobito_dsj.
 
-$dsj_color_a:           #C00000;
-$dsj_color_b:           #FF424B;
-$dsj_color_c:           #a00000;
+$dsj_color_a:           #005476;
+$dsj_color_b:           #005476;
+$dsj_color_c:           #005476;
 $dsj_color_d:           #2a6496;
 $dsj_color_e:           #EDEDED;
 $dsj_color_f:           #333333;
@@ -61,7 +61,7 @@ $table-color-hover:     lighten($purple, 50%);
 
 // Typography
 // -------------------------
-$sans-font-family:      Helvetica, Arial, sans-serif !default;
+$sans-font-family:      "Karla", sans-serif !default;
 $heading-font-family:   $sans-font-family !default;
 $font-family-base:      $sans-font-family !default;
 $headings-font-weight:  normal !default; // instead of browser default, bold
