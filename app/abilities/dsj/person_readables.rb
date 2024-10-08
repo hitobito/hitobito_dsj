@@ -15,7 +15,7 @@ module Dsj::PersonReadables
     if user_is_mitarbeiter_or_vorstandsmitglied?
       Person.only_public_data
         .joins(roles: :group)
-        .where(roles: {deleted_at: nil}, groups: {deleted_at: nil})
+        .where(groups: {deleted_at: nil})
     else
       accessible_people_without_mitarbeiter
     end
