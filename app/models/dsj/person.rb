@@ -15,7 +15,6 @@ module Dsj::Person
     Person::SEARCHABLE_ATTRS[Person::SEARCHABLE_ATTRS.size - 1][:phone_numbers] << :normalized
     Person::SEARCHABLE_ATTRS[Person::SEARCHABLE_ATTRS.size - 1][:tags] = [:name]
     Person::SEARCHABLE_ATTRS << :function << :website << :contact_number
-    include PgSearchable
 
     Person::SALUTATIONS = [
       [:formal_f_de, "Sehr geehrte Frau"], [:formal_m_de, "Sehr geehrter Herr"],
