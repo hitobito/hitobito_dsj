@@ -12,8 +12,7 @@ module Dsj::Person
       :salutation_addition << :financial_support <<
       :political_party << :current_secondary_appointment
 
-    Person::SEARCHABLE_ATTRS[Person::SEARCHABLE_ATTRS.size - 1][:phone_numbers] << :normalized
-    Person::SEARCHABLE_ATTRS[Person::SEARCHABLE_ATTRS.size - 1][:tags] = [:name]
+    Person::SEARCHABLE_ATTRS.select { |attr| attr.is_a?(Hash) }.first[:phone_numbers] << :normalized
     Person::SEARCHABLE_ATTRS << :function << :website << :contact_number
 
     Person::SALUTATIONS = [
