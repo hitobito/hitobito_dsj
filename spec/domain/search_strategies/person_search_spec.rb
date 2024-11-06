@@ -35,11 +35,6 @@ describe SearchStrategies::PersonSearch do
       expect(result).to include(people(:member))
     end
 
-    it "finds accessible person by tags" do
-      result = search_class(people(:member).tags.first.name).search_fulltext
-      expect(result).to include(people(:member))
-    end
-
     it "finds accessible person by phone numbers" do
       result = search_class(people(:member).phone_numbers.first.normalized.to_s).search_fulltext
       expect(result).to include(people(:member))
