@@ -13,6 +13,7 @@ class DefaultPrivateForSocialAccounts < ActiveRecord::Migration[4.2]
   private
 
   def make_existing_social_accounts_private
+    SocialAccount.reset_column_information
     SocialAccount.find_each do |p|
       p.update!(public: false)
     end
