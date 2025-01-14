@@ -4,5 +4,5 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 module HitobitoDsj
-  VERSION = "2.3.7" # rubocop:disable Style/MutableConstant or produce error when building RPM
+  VERSION = "2.4.0" # rubocop:disable Style/MutableConstant or produce error when building RPM
 end
