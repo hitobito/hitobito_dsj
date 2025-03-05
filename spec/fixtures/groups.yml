@@ -10,7 +10,8 @@ dachverband:
   name: Dachverband
   type: Group::Dachverband
   email: root@example.net
-  address: Ophovener Str. 79a
+  street: Ophovener Str.
+  housenumber: 79a
   zip_code: 2843
   town: Neu Carlscheid
   layer_group_id: <%= ActiveRecord::FixtureSet.identify(:dachverband) %>
