@@ -1,6 +1,14 @@
+#  Copyright (c) 2012-2016, Dachverband Schweizer Jugendparlamente. This file is part of
+#  hitobito_dsj and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_dsj.
+
 fr:
   activerecord:
     models:
+
+      ### GROUPS
+
       group/dachverband:
         one: Fédération
         many: Fédérations
@@ -25,6 +33,10 @@ fr:
         one: Groupe de projet
         many: Groupes de projet
         other: Groupes de projet
+      group/jugendparlament_status_verwaltung:
+        one: Jupa Status Verwaltung
+        many: Jupa Stati Verwaltung
+        other: Jupa Stati Verwaltung
       group/jugendparlament_status:
         one: Statut
         many: Statut
@@ -57,6 +69,12 @@ fr:
         one: Groupe de projet
         many: Groupes de projet
         other: Groupes de projet
+      ### ROLES
+
+      group/dachverband_geschaeftsstelle/admin:
+        one: Administrator/-in
+        many: Administratoren
+        other: Administratoren
       group/dachverband_geschaeftsstelle/mitarbeiter:
         one: Collaborateur/trice
         many: Collaborateur/trice
@@ -65,6 +83,10 @@ fr:
         one: Membre du comité
         many: Membre du comité
         other: Membre du comité
+      group/dachverband_externe_kontakte/adressverwaltung:
+        one: Adressverwalter/-in
+        many: Adressvewalter/-innen
+        other: Adressvewalter/-innen
       group/dachverband_externe_kontakte/kontakt:
         one: Contact
         many: Contact
@@ -101,6 +123,14 @@ fr:
         one: Membre
         many: Membres
         other: Membres
+      group/jugendparlament_status_verwaltung/adressverwaltung:
+        one: Adressverwalter/-in
+        many: Adressvewalter/-innen
+        other: Adressvewalter/-innen
+      group/jugendparlament_status/adressverwaltung:
+        one: Adressverwalter/-in
+        many: Adressvewalter/-innen
+        other: Adressvewalter/-innen
     attributes:
       group:
         founding_year: Année de création
@@ -112,7 +142,14 @@ fr:
         members_count: Nombre de participants
         members_age: Age des membres
         political_competences: Compétences politiques
+        competence_initiative: Vorstossrecht
+        competence_consultation: Beratung
+        competence_council_meeting: Teilnahme an Ratssitzungen
+        competence_other: andere Rechte
+        competence_none: Keine speziellen Rechte
+        competence_unknown: Keine Angabe
         supervision: Accompagnement
+        supervision_kind: Begleitungsart
         state: Statut
         member: Membre de la FSPJ
         joining_year: Année d'adhésion à la FSPJ
@@ -120,20 +157,24 @@ fr:
         contact_history: Historique de contact
         last_contact: Dernier contact
         remarks: Remarques
+
         languages:
           de: Allemand
           fr: Français
           it: Italien
           de_fr: Bilingue (all/fr)
+
         areas:
           local: communal
           regional: Régional
           cantonal: Cantonal
           federal: National
           other: Autre
+
         legal_forms:
           public: De droit public
           private: De droit privé
+
         states:
           very_active: Très actif
           active: Actif
@@ -142,22 +183,37 @@ fr:
           on_hold: En suspens
           founding: En création
           interested: Intérêt à la création
+
+        supervision_kinds:
+          youth: Jugendarbeit
+          political: Gemeindeverwaltung/Politik
+          loose: lose Begleitung
+          none: keine Begleitung
+          unknown: keine Angaben
+
       group/jugendparlament:
         languages:
+          _nil: ''
           de: Allemand
           fr: Français
           it: Italien
           de_fr: Bilingue (fr/all)
+
         areas:
+          _nil: ''
           local: Communal
           regional: Régional
           cantonal: Cantonal
           federal: National
           other: Autre
+
         legal_forms:
+          _nil: ''
           public: De droit public
           private: De droit privé
+
         states:
+          _nil: ''
           very_active: Très actif
           active: Actif
           little_active: Peu actif
@@ -165,12 +221,24 @@ fr:
           on_hold: En suspens
           founding: En création
           interested: Intéret à la création
+
+        supervision_kinds:
+          youth: Jugendarbeit
+          political: Gemeindeverwaltung/Politik
+          loose: lose Begleitung
+          none: keine Begleitung
+          unknown: keine Angaben
+
       person:
         function: Fonction
         contact_number: Numéro de téléphone
         website: Site web
         salutation: Titre
         salutation_addition: Compément de titre
+        financial_support: Finanzielle Unterstützung
+        political_party: Politische Partei
+        current_secondary_appointment: Aktuelle Nebenämter
+
         salutations:
           _nil: (aucun)
           formal_f: Madame

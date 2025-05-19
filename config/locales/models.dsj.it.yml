@@ -1,6 +1,14 @@
+#  Copyright (c) 2012-2016, Dachverband Schweizer Jugendparlamente. This file is part of
+#  hitobito_dsj and licensed under the Affero General Public License version 3
+#  or later. See the COPYING file at the top-level directory or at
+#  https://github.com/hitobito/hitobito_dsj.
+
 it:
   activerecord:
     models:
+
+      ### GROUPS
+
       group/dachverband:
         one: Federazione
         many: Federazioni
@@ -25,6 +33,10 @@ it:
         one: Gruppo di lavoro
         many: Gruppi di lavoro
         other: Gruppi di lavoro
+      group/jugendparlament_status_verwaltung:
+        one: Jupa Status Verwaltung
+        many: Jupa Stati Verwaltung
+        other: Jupa Stati Verwaltung
       group/jugendparlament_status:
         one: Stato
         many: Stati
@@ -57,6 +69,12 @@ it:
         one: Gruppo di lavoro
         many: Gruppi di lavoro
         other: Gruppi di lavoro
+      ### ROLES
+
+      group/dachverband_geschaeftsstelle/admin:
+        one: Administrator/-in
+        many: Administratoren
+        other: Administratoren
       group/dachverband_geschaeftsstelle/mitarbeiter:
         one: Collaboratore/trice
         many: Collaboratore/trice
@@ -65,6 +83,10 @@ it:
         one: Membro del comitato
         many: Membro del comitato
         other: Membro del comitato
+      group/dachverband_externe_kontakte/adressverwaltung:
+        one: Adressverwalter/-in
+        many: Adressvewalter/-innen
+        other: Adressvewalter/-innen
       group/dachverband_externe_kontakte/kontakt:
         one: Contatto
         many: Contatto
@@ -101,6 +123,14 @@ it:
         one: Membro
         many: Membri
         other: Membri
+      group/jugendparlament_status_verwaltung/adressverwaltung:
+        one: Adressverwalter/-in
+        many: Adressvewalter/-innen
+        other: Adressvewalter/-innen
+      group/jugendparlament_status/adressverwaltung:
+        one: Adressverwalter/-in
+        many: Adressvewalter/-innen
+        other: Adressvewalter/-innen
     attributes:
       group:
         founding_year: Anno di creazione
@@ -109,27 +139,42 @@ it:
         legal_form: Basi legali
         budget: Budget
         financial_backer: Finanziatore
+        members_count: Anzahl Mitglieder
         members_age: Età membro
         political_competences: Competenze politiche
+        competence_initiative: Vorstossrecht
+        competence_consultation: Beratung
+        competence_council_meeting: Teilnahme an Ratssitzungen
+        competence_other: andere Rechte
+        competence_none: Keine speziellen Rechte
+        competence_unknown: Keine Angabe
         supervision: Accompagnatore
+        supervision_kind: Begleitungsart
         state: Status
         member: Membro FSPG
         joining_year: Anno di adesione FSPG
         visited_events: Eventi FSPG frequentati
+        contact_history: Kontakthistory
+        last_contact: Letzter Kontakt
+        remarks: Bemerkungen
+
         languages:
           de: Tedesco
           fr: Francese
           it: Italiano
           de_fr: Bilingue (ita/tede)
+
         areas:
           local: comunale
           regional: regionale
           cantonal: cantonale
           federal: nazionale
           other: altro
+
         legal_forms:
           public: di diritto pubblico
           private: di diritto privato
+
         states:
           very_active: molto attivo
           active: attivo
@@ -138,22 +183,37 @@ it:
           on_hold: inattivo
           founding: in creazione
           interested: interessato alla creazione
+
+        supervision_kinds:
+          youth: Jugendarbeit
+          political: Gemeindeverwaltung/Politik
+          loose: lose Begleitung
+          none: keine Begleitung
+          unknown: keine Angaben
+
       group/jugendparlament:
         languages:
+          _nil: ''
           de: Tedesco
           fr: Francese
           it: Italiano
           de_fr: Bilingue (ita/tede)
+
         areas:
+          _nil: ''
           local: comunale
           regional: regionale
           cantonal: cantonale
           federal: nazionale
           other: altro
+
         legal_forms:
+          _nil: ''
           public: di diritto pubblico
           private: di diritto privato
+
         states:
+          _nil: ''
           very_active: molto attivo
           active: attivo
           little_active: poco attivo
@@ -161,12 +221,24 @@ it:
           on_hold: inattivo
           founding: in creazione
           interested: interessato alla creazione
+
+        supervision_kinds:
+          youth: Jugendarbeit
+          political: Gemeindeverwaltung/Politik
+          loose: lose Begleitung
+          none: keine Begleitung
+          unknown: keine Angaben
+
       person:
         function: Funzione
         contact_number: Numero di contatto
         website: Web-Site
         salutation: Titolo
         salutation_addition: Complemento al titolo
+        financial_support: Finanzielle Unterstützung
+        political_party: Politische Partei
+        current_secondary_appointment: Aktuelle Nebenämter
+
         salutations:
           _nil: (nessuno)
           formal_f: Gentile Signora
