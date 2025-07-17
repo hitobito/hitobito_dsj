@@ -48,6 +48,28 @@ module HitobitoDsj
       Export::Tabular::Groups::Row.include Dsj::Export::Tabular::Groups::Row
       Export::Tabular::People::PeopleAddress.include Dsj::Export::Tabular::People::PeopleAddress
       Export::Tabular::People::PersonRow.include Dsj::Export::Tabular::People::PersonRow
+
+      i = NavigationHelper::MAIN.index { |opts| opts[:label] == :events }
+      NavigationHelper::MAIN.insert(
+        i + 1,
+        label: :fundraisings,
+        icon_name: :"calendar-alt",
+        url: :list_fundraisings_path,
+        if: lambda do |_|
+          true
+        end
+      )
+
+      # helpers
+      Sheet::Event.include Dsj::Sheet::Event
+      Sheet::Group.include Dsj::Sheet::Group
+
+      FilterNavigation::Event::Participations.prepend Dsj::FilterNavigation::Event::Participations
+
+      GroupAbility.include Dsj::GroupAbility
+      EventAbility.include Dsj::EventAbility
+
+      GroupsHelper.prepend Dsj::GroupsHelper
     end
 
     initializer "dsj.add_settings" do |_app|

@@ -7,3 +7,20 @@ de:
   notes:
     actions_edit:
       title: Notiz bearbeiten
+  navigation:
+    fundraisings: Fundraising
+  fundraisings:
+    index:
+      title: Fundraisings
+      explanation: "Explanation..."
+  groups:
+    tabs:
+      fundraisings: Fundraising
+  events:
+    tabs: 
+      supporters: Förder:innen
+    new:
+      title_event/fundraising: Fundraising erstellen
+    global:
+      link:
+        add_event/fundraising: Fundraising erstellen
