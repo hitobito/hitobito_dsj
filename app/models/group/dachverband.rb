@@ -6,6 +6,7 @@
 class Group::Dachverband < Group
   self.layer = true
   self.default_children = [Group::DachverbandIntern, Group::DachverbandExterneKontakte]
+  self.event_types = [Event, Event::Fundraising]
 
   children Group::DachverbandIntern,
     Group::DachverbandExterneKontakte,

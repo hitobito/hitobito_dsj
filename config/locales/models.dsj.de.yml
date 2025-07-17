@@ -103,6 +103,21 @@ de:
         one: Adressverwalter/-in
         other: Adressvewalter/-innen
 
+
+      event/fundraising/role/confirmed:
+        one: Zusage
+        other: Zusage
+      event/fundraising/role/declined:
+        one: Absage
+        other: Absage
+      event/fundraising/role/pending:
+        one: Offen
+        other: Offen
+
+      event/fundraising:
+        one: Fundraising
+        other: Fundraisings
+
     attributes:
       group:
         founding_year: Gründungsjahr
