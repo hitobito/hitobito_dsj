@@ -1,0 +1,10 @@
+- title t('.title')
+
+#main
+  %section
+    = grouped_table(@fundraisings, 4) do |event|
+      %td
+        %strong
+          = event.labeled_link
+      %td= event.dates_full
+      %td= event.description_short

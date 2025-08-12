@@ -4,6 +4,8 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 class Group::JugendparlamentStatus < Group
+  self.event_types = [Event, Event::Fundraising]
+
   self.layer = true
 
   children Group::Jugendparlament

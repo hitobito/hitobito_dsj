@@ -4,6 +4,8 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 class Group::JugendparlamentProjektgruppe < Group
+  self.event_types = [Event, Event::Fundraising]
+
   children Group::JugendparlamentProjektgruppe
 
   ### ROLES

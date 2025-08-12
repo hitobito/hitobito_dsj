@@ -4,6 +4,8 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 class Group::DachverbandIntern < Group
+  self.event_types = [Event, Event::Fundraising]
+
   self.default_children = [Group::DachverbandGeschaeftsstelle, Group::DachverbandVorstand]
 
   children Group::DachverbandGeschaeftsstelle,

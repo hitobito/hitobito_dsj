@@ -1,0 +1,14 @@
+- title t('.title')
+
+%p= t('.explanation')
+
+= action_button(t('event.lists.courses.csv_export_button'), params.merge(format: :csv), :download)
+
+#main
+  %section
+    = grouped_table(@fundraisings, 4) do |fundraising|
+      %td
+        %strong
+          = fundraising.labeled_link
+      %td= fundraising.dates_full
+      %td= fundraising.description_short

@@ -103,6 +103,23 @@ de:
         one: Adressverwalter/-in
         other: Adressvewalter/-innen
 
+
+      event/fundraising/role/confirmed:
+        one: Zusage
+        other: Zusagen
+      event/fundraising/role/declined:
+        one: Absage
+        other: Absagen
+      event/fundraising/role/pending:
+        one: Offen
+        other: Offene
+      event/fundraising/date:
+        one: Projektzeitraum
+        other: Projektzeiträume
+      event/fundraising:
+        one: Fundraising
+        other: Fundraisings
+
     attributes:
       group:
         founding_year: Gründungsjahr
@@ -220,3 +237,9 @@ de:
           informal_f: Liebe
           informal_m: Lieber
           formal_f_m: Sehr geehrte Damen und Herren
+
+      event/fundraising:
+        contact: Projektverantwortliche:r
+        cost: Budget
+        dates: Projektzeitraum
+        dates_full: Projektzeitraum
