@@ -5,11 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-
-module Event::Fundraising::Role
-  class Confirmed < ::Event::Role
-    self.permissions = []
-
-    self.kind = :participant
-  end
+Fabricator(:dsj_fundraising, from: :event, class_name: :"Event::Fundraising") do
+  dates { [Fabricate(:event_date, start_at: 5.days.from_now, finish_at: 10.days.from_now)] }
 end
