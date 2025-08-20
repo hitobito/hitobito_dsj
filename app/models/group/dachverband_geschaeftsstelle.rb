@@ -4,6 +4,7 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 class Group::DachverbandGeschaeftsstelle < ::Group
+  self.event_types = [Event, Event::Fundraising]
   ### ROLES
 
   class Admin < ::Role

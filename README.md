@@ -11,7 +11,7 @@ of Dachverband Schweizer Jugendparlamente.
     * Administrator/-in: [:layer_and_below_full, :admin, :contact_data]
     * Mitarbeiter/-in: [:group_read, :contact_data]
   * Vorstand
-    * Vorstandsmitglied: [:layer_full, :contact_data]
+    * Vorstandsmitglied: [:group_read, :contact_data]
   * Projektgruppe
     * Leitung: [:group_and_below_full, :contact_data]
     * Mitglied: [:group_and_below_read]

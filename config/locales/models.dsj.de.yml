@@ -1,7 +1,8 @@
-#  Copyright (c) 2012-2016, Dachverband Schweizer Jugendparlamente. This file is part of
+#  Copyright (c) 2012-2025, Dachverband Schweizer Jugendparlamente. This file is part of
 #  hitobito_dsj and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
+
 
 de:
   activerecord:
@@ -102,6 +103,23 @@ de:
       group/jugendparlament_status/adressverwaltung:
         one: Adressverwalter/-in
         other: Adressvewalter/-innen
+
+
+      event/fundraising/role/confirmed:
+        one: Zusage
+        other: Zusagen
+      event/fundraising/role/declined:
+        one: Absage
+        other: Absagen
+      event/fundraising/role/pending:
+        one: Offen
+        other: Offene
+      event/fundraising/date:
+        one: Projektzeitraum
+        other: Projektzeiträume
+      event/fundraising:
+        one: Fundraising
+        other: Fundraisings
 
     attributes:
       group:
@@ -220,3 +238,9 @@ de:
           informal_f: Liebe
           informal_m: Lieber
           formal_f_m: Sehr geehrte Damen und Herren
+
+      event/fundraising:
+        contact: Projektverantwortliche:r
+        cost: Budget
+        dates: Projektzeitraum
+        dates_full: Projektzeitraum

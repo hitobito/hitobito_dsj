@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#  Copyright (c) 2012-2023, Dachverband Schweizer Jugendparlamente. This file is part of
+#  Copyright (c) 2012-2025, Dachverband Schweizer Jugendparlamente. This file is part of
 #  hitobito_dsj and licensed under the Affero General Public License version 3
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
@@ -26,6 +26,9 @@ module HitobitoDsj
       NoteAbility.include Dsj::NoteAbility
       PersonAbility.include Dsj::PersonAbility
       PersonReadables.include Dsj::PersonReadables
+      GroupAbility.include Dsj::GroupAbility
+      EventAbility.include Dsj::EventAbility
+      Event::ParticipationAbility.include Dsj::Event::ParticipationAbility
 
       # models
       Group.include Dsj::Group
@@ -43,11 +46,31 @@ module HitobitoDsj
         :political_party,
         :current_secondary_appointment]
       NotesController.include Dsj::NotesController
+      Event::ListsController.prepend Dsj::Event::ListsController
 
       # exports
       Export::Tabular::Groups::Row.include Dsj::Export::Tabular::Groups::Row
       Export::Tabular::People::PeopleAddress.include Dsj::Export::Tabular::People::PeopleAddress
       Export::Tabular::People::PersonRow.include Dsj::Export::Tabular::People::PersonRow
+
+      # sheets
+      GroupsHelper.prepend Dsj::GroupsHelper
+
+      # helpers
+      Sheet::Group.include Dsj::Sheet::Group
+
+      i = NavigationHelper::MAIN.index { |opts| opts[:label] == :events }
+      NavigationHelper::MAIN.insert(
+        i + 1,
+        label: :fundraisings,
+        icon_name: :coins,
+        url: :list_fundraisings_path,
+        if: lambda do |_|
+          true
+        end
+      )
+
+      FilterNavigation::Event::Participations.prepend Dsj::FilterNavigation::Event::Participations
     end
 
     initializer "dsj.add_settings" do |_app|

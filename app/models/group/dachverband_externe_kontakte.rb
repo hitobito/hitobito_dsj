@@ -4,6 +4,8 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 class Group::DachverbandExterneKontakte < Group
+  self.event_types = [Event, Event::Fundraising]
+
   children Group::DachverbandExterneKontakte
 
   ### ROLES

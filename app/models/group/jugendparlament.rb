@@ -16,6 +16,7 @@ class Group::Jugendparlament < Group
   self.default_children = [Group::JugendparlamentLeitung,
     Group::JugendparlamentVorstand,
     Group::JugendparlamentMitglieder]
+  self.event_types = [Event, Event::Fundraising]
 
   self.used_attributes += [:founding_year, :language, :area, :legal_form, :budget,
     :financial_backer, :members_age, :political_competences,
