@@ -10,4 +10,4 @@
   :wagon: dsj
   :source_file: hitobito/app/helpers/filter_navigation/event/participations.rb
   :patch_file: hitobito_dsj/app/helpers/dsj/filter_navigation/event/participations.rb
-  :patch_file_line: 10
+  :patch_file_line: 9
