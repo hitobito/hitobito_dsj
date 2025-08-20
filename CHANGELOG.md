@@ -2,7 +2,7 @@
 
 ## unreleased
 
-*   Neuer Event Typ Fundraising (hitobito/hitobito_dsj#34)
+*   Neu können Fundraisings mit Förder:innen in hitobito erfasst und verwaltet werden (hitobito/hitobito_dsj#34)
 
 ## Version 1.13
 

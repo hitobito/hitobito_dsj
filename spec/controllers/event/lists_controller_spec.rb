@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-
 require "spec_helper"
 
 describe Event::ListsController do
@@ -19,17 +18,18 @@ describe Event::ListsController do
   describe "GET fundraisings" do
     context "as leader" do
       let(:user) { people(:leader) }
+      let(:now) { Time.zone.now }
 
-      before do
-        now = Time.zone.now
-
-        @next_fundraising = Fabricate(:dsj_fundraising,
+      let!(:next_fundraising) do
+        Fabricate(:dsj_fundraising,
           groups: [groups(:jupa_be_leitung)],
           dates: [
             Fabricate(:event_date, start_at: now + 5.days, finish_at: now + 10.days)
           ])
+      end
 
-        _past_fundraising = Fabricate(:dsj_fundraising,
+      let!(:past_fundraising) do
+        Fabricate(:dsj_fundraising,
           groups: [groups(:jupa_be_leitung)],
           dates: [
             Fabricate(:event_date, start_at: now - 10.days, finish_at: now - 5.days)
@@ -39,7 +39,7 @@ describe Event::ListsController do
       it "contains only current and upcoming fundraisings" do
         get :fundraisings
 
-        expect(assigns(:fundraisings).values.flatten).to eq [@next_fundraising]
+        expect(assigns(:fundraisings).values.flatten).to eq [next_fundraising]
       end
     end
 
