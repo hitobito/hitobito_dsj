@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-
 class Event::Fundraising < Event
   self.used_attributes -= [:motto, :maximum_participants,
     :location, :application_opening_at,

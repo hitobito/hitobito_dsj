@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-
 module Dsj::GroupsHelper
   def tab_event_participants_label(entry)
     return I18n.t("events.tabs.supporters") if entry.is_a? Event::Fundraising

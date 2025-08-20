@@ -5,7 +5,6 @@
 #  or later. See the COPYING file at the top-level directory or at
 #  https://github.com/hitobito/hitobito_dsj.
 
-
 module Dsj::FilterNavigation::Event::Participations
   def predefined_filters
     return [] if event.is_a? Event::Fundraising
