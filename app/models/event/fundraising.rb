@@ -6,7 +6,7 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 class Event::Fundraising < Event
-  self.used_attributes -= [:motto, :maximum_participants,
+  self.used_attributes -= [:maximum_participants,
     :location, :application_opening_at,
     :application_closing_at, :application_conditions,
     :external_applications, :applications_cancelable,
