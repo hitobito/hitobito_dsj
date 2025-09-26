@@ -13,7 +13,7 @@ class Event::Fundraising < Event
     :signature, :signature_confirmation, :signature_confirmation_text,
     :required_contact_attrs, :hidden_contact_attrs,
     :participations_visible, :globally_visible,
-    :minimum_participants, :automatic_assignment]
+    :minimum_participants, :automatic_assignment, :guest_limit]
 
   self.supports_invitations = false
 

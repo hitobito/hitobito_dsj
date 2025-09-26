@@ -7,10 +7,10 @@ module Dsj::Event::ParticipationContactData
   extend ActiveSupport::Concern
 
   included do
-    Event::ParticipationContactData.contact_attrs << :contact_number <<
+    Event.possible_contact_attrs << :contact_number <<
       :salutation << :salutation_addition << :language <<
       :political_party << :current_secondary_appointment
 
-    delegate(*Event::ParticipationContactData.contact_attrs, to: :person)
+    delegate(*Event.possible_contact_attrs, to: :person)
   end
 end
