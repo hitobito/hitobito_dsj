@@ -19,7 +19,7 @@ module HitobitoDsj
       #{config.root}/app/jobs
     ]
 
-    config.to_prepare do
+    config.to_prepare do # rubocop:todo Metrics/BlockLength
       # extend application classes here
 
       # abilities
