@@ -112,8 +112,8 @@ de:
         one: Absage
         other: Absagen
       event/fundraising/role/pending:
-        one: Offen
-        other: Offene
+        one: Angefragt
+        other: Angefragte
       event/fundraising/date:
         one: Projektzeitraum
         other: Projektzeiträume
