@@ -141,8 +141,9 @@ fr:
         many: Absagen
         other: Absagen
       event/fundraising/role/pending:
-        one: Angefragt
-        other: Angefragte
+        one: Offen
+        many: Offene
+        other: Offene
       event/fundraising/date:
         one: Projektzeitraum
         many: Projektzeiträume
