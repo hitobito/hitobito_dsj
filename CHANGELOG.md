@@ -1,6 +1,6 @@
 # Hitobito Changelog
 
-## unreleased
+## Version 2.7
 
 *   Neu können Fundraisings mit Förder:innen in hitobito erfasst und verwaltet werden (hitobito/hitobito_dsj#34)
 
