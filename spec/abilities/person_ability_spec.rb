@@ -37,11 +37,11 @@ describe PersonAbility do
     end
 
     it 'may see mitglieds tags' do
-      is_expected.to be_able_to(:index_tags, mitglied)
+      is_expected.to be_able_to(:show_tags, mitglied)
     end
 
-    it 'may manage mitglieds tags' do
-      is_expected.to be_able_to(:manage_tags, mitglied)
+    it 'may assign mitglieds tags' do
+      is_expected.to be_able_to(:assign_tags, mitglied)
     end
   end
 
