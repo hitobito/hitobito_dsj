@@ -11,11 +11,11 @@ module Dsj::PersonAbility
       permission(:any).may(:show).if_herself_or_geschaeftsstellen_mitarbeiter
 
       permission(:group_full)
-        .may(:index_tags, :manage_tags, :index_notes)
+        .may(:index_notes)
         .non_restricted_in_same_group
 
       permission(:group_and_below_full)
-        .may(:index_tags, :manage_tags, :index_notes)
+        .may(:index_notes)
         .non_restricted_in_same_group_or_below
     end
   end
