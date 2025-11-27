@@ -24,3 +24,6 @@ rubocop-results.xml
 .envrc
 .tool-versions
 config/environment.rb
+
+db/schema.rb
+db/schema.rb.diff
