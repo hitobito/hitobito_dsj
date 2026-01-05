@@ -6,13 +6,13 @@
 = render_attrs(entry, :contact_number, :salutation, :salutation_addition, :financial_support)
 -# = render_attrs(entry, :political_party, :current_secondary_appointment)
 = field_set_tag do
-  - if entry.show_attr?(:contact_number)
+  - if event.show_contact_attr?(:contact_number)
     = f.labeled_input_field :contact_number
-  - if entry.show_attr?(:salutation)
+  - if event.show_contact_attr?(:salutation)
     = f.labeled_collection_select :salutation, Salutation.available, :first, :last, { include_blank: "" }, class: 'form-select form-select-sm'
-  - if entry.show_attr?(:salutation_addition)
+  - if event.show_contact_attr?(:salutation_addition)
     = f.labeled_input_field :salutation_addition
 
 = field_set_tag do
   - [:political_party, :current_secondary_appointment].each do |a|
-    = f.labeled_input_field(a) if entry.show_attr?(a)
+    = f.labeled_input_field(a) if event.show_contact_attr?(a)
