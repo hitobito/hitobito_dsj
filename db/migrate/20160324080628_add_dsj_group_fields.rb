@@ -1,7 +1,9 @@
 class AddDsjGroupFields < ActiveRecord::Migration[4.2]
   def change
     add_column :groups, :founding_year, :integer
-    add_column :groups, :language, :string
+    unless column_exists? :groups, :language
+      add_column :groups, :language, :string
+    end
     add_column :groups, :area, :string
     add_column :groups, :legal_form, :string
     add_column :groups, :budget, :string

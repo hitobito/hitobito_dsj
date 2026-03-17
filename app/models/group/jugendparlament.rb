@@ -6,7 +6,6 @@
 class Group::Jugendparlament < Group
   include I18nEnums
 
-  LANGUAGES = %w[de fr it de_fr].freeze
   AREAS = %w[local regional cantonal federal other].freeze
   LEGAL_FORMS = %w[public private].freeze
   STATES = %w[very_active active little_active passive on_hold founding interested].freeze
@@ -32,7 +31,6 @@ class Group::Jugendparlament < Group
     Group::JugendparlamentExterneKontakte,
     Group::JugendparlamentProjektgruppe
 
-  i18n_enum :language, LANGUAGES
   i18n_enum :area, AREAS
   i18n_enum :legal_form, LEGAL_FORMS
   i18n_enum :state, STATES
@@ -43,10 +41,6 @@ class Group::Jugendparlament < Group
   ### ROLES
 
   class << self
-    def language_labels
-      labels(LANGUAGES, :languages)
-    end
-
     def area_labels
       labels(AREAS, :areas)
     end

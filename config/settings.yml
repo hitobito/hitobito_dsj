@@ -16,11 +16,9 @@ application:
     fr: Français
     it: Italiano
   additional_languages:
-    de: Deutsch
-    fr: Français
-    it: Italiano
     en: English
     rm: Rumantsch
+    de_fr: Bilingue (de/fr)
 
 
 

@@ -148,12 +148,6 @@ de:
         last_contact: Letzter Kontakt
         remarks: Bemerkungen
 
-        languages:
-          de: Deutsch
-          fr: Französisch
-          it: Italienisch
-          de_fr: Bilingue (de/fr)
-
         areas:
           local: kommunal
           regional: regional
@@ -180,14 +174,6 @@ de:
           loose: lose Begleitung
           none: keine Begleitung
           unknown: keine Angaben
-
-      group/jugendparlament:
-        languages:
-          _nil: ''
-          de: Deutsch
-          fr: Französisch
-          it: Italienisch
-          de_fr: Bilingue (de/fr)
 
         areas:
           _nil: ''

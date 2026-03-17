@@ -179,12 +179,6 @@ it:
         last_contact: Letzter Kontakt
         remarks: Bemerkungen
 
-        languages:
-          de: Tedesco
-          fr: Francese
-          it: Italiano
-          de_fr: Bilingue (ita/tede)
-
         areas:
           local: comunale
           regional: regionale
@@ -211,14 +205,6 @@ it:
           loose: lose Begleitung
           none: keine Begleitung
           unknown: keine Angaben
-
-      group/jugendparlament:
-        languages:
-          _nil: ''
-          de: Tedesco
-          fr: Francese
-          it: Italiano
-          de_fr: Bilingue (ita/tede)
 
         areas:
           _nil: ''
