@@ -6,9 +6,6 @@
 = field_set_tag do
   = f.labeled_input_fields(*entry.modifiable_attributes(:founding_year))
 
-  - entry.modifiable_attributes(:language).each do |attr|
-    = f.labeled_i18n_enum_field attr, Group::Jugendparlament.language_labels, prompt: true, class: 'form-select form-select-sm'
-
   - entry.modifiable_attributes(:area).each do |attr|
     = f.labeled_i18n_enum_field attr, Group::Jugendparlament.area_labels, prompt: true, class: 'form-select form-select-sm'
 
