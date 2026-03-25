@@ -180,24 +180,24 @@ fr:
         remarks: Remarques
 
         areas:
-          local: communal
-          regional: Régional
-          cantonal: Cantonal
-          federal: National
-          other: Autre
+          local: kommunal
+          regional: regional
+          cantonal: kantonal
+          federal: national
+          other: andere
 
         legal_forms:
-          public: De droit public
-          private: De droit privé
+          public: öffentlich-rechtlich
+          private: privatrechtlich
 
         states:
-          very_active: Très actif
-          active: Actif
-          little_active: Peu actif
-          passive: Passif
-          on_hold: En suspens
-          founding: En création
-          interested: Intérêt à la création
+          very_active: sehr aktiv
+          active: aktiv
+          little_active: wenig aktiv
+          passive: passiv
+          on_hold: stillgelegt
+          founding: in Gründung
+          interested: gründungsinteressiert
 
         supervision_kinds:
           youth: Jugendarbeit
@@ -208,7 +208,7 @@ fr:
 
         areas:
           _nil: ''
-          local: Communal
+          local: communal
           regional: Régional
           cantonal: Cantonal
           federal: National
@@ -227,7 +227,7 @@ fr:
           passive: Passif
           on_hold: En suspens
           founding: En création
-          interested: Intéret à la création
+          interested: Intérêt à la création
 
         supervision_kinds:
           youth: Jugendarbeit

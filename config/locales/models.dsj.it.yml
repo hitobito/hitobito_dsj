@@ -180,24 +180,24 @@ it:
         remarks: Bemerkungen
 
         areas:
-          local: comunale
-          regional: regionale
-          cantonal: cantonale
-          federal: nazionale
-          other: altro
+          local: kommunal
+          regional: regional
+          cantonal: kantonal
+          federal: national
+          other: andere
 
         legal_forms:
-          public: di diritto pubblico
-          private: di diritto privato
+          public: öffentlich-rechtlich
+          private: privatrechtlich
 
         states:
-          very_active: molto attivo
-          active: attivo
-          little_active: poco attivo
-          passive: passivo
-          on_hold: inattivo
-          founding: in creazione
-          interested: interessato alla creazione
+          very_active: sehr aktiv
+          active: aktiv
+          little_active: wenig aktiv
+          passive: passiv
+          on_hold: stillgelegt
+          founding: in Gründung
+          interested: gründungsinteressiert
 
         supervision_kinds:
           youth: Jugendarbeit
