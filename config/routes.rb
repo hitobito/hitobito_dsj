@@ -20,6 +20,12 @@ Rails.application.routes.draw do
       resources :events, only: [] do # do not redefine events actions, only add new ones
         collection do
           get 'fundraising' => 'events#index', type: 'Event::Fundraising'
+          scope module: "events", only: [:new, :create] do
+            resources :filters,
+                      path: "fundraising/filters",
+                      as: "events_fundraising_filters",
+                      type: "Event::Fundraising"
+          end
         end
       end
     end
