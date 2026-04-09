@@ -245,8 +245,6 @@ it:
         financial_support: Finanzielle Unterstützung
         political_party: Politische Partei
         current_secondary_appointment: Aktuelle Nebenämter
-        languages:
-          de_fr: Bilingue (ita/tede)
 
         salutations:
           _nil: (nessuno)
