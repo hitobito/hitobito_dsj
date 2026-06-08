@@ -6,6 +6,9 @@
 #  https://github.com/hitobito/hitobito_dsj.
 
 class Event::Fundraising < Event
+  self.manually_sendable_participant_mails = []
+  self.manually_sendable_leader_mails = []
+
   self.used_attributes -= [:maximum_participants,
     :location, :application_opening_at,
     :application_closing_at, :application_conditions,
