@@ -9,7 +9,7 @@
   - if event.show_contact_attr?(:contact_number)
     = f.labeled_input_field :contact_number
   - if event.show_contact_attr?(:salutation)
-    = f.labeled_collection_select :salutation, Salutation.available, :first, :last, { include_blank: "" }, class: 'form-select form-select-sm'
+    = f.labeled_collection_select :salutation, Salutation.available, :first, :last, { include_blank: "" }
   - if event.show_contact_attr?(:salutation_addition)
     = f.labeled_input_field :salutation_addition
 
