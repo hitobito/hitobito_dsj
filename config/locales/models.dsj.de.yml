@@ -114,6 +114,15 @@ de:
       event/fundraising/role/pending:
         one: Angefragt
         other: Angefragte
+      event/fundraising/role/to_clarify:
+        one: Abzuklären
+        other: Abzuklären
+      event/fundraising/role/planned:
+        one: Geplant
+        other: Geplante
+      event/fundraising/role/deferred:
+        one: Zurückgestellt
+        other: Zurückgestellte
       event/fundraising/date:
         one: Projektzeitraum
         other: Projektzeiträume

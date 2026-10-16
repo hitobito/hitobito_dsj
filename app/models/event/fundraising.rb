@@ -21,7 +21,10 @@ class Event::Fundraising < Event
   self.supports_invitations = false
 
   self.role_types = [
+    Event::Fundraising::Role::ToClarify,
+    Event::Fundraising::Role::Planned,
     Event::Fundraising::Role::Pending,
+    Event::Fundraising::Role::Deferred,
     Event::Fundraising::Role::Confirmed,
     Event::Fundraising::Role::Declined
   ]
