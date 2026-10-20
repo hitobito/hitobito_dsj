@@ -1,5 +1,9 @@
 # Hitobito Changelog
 
+## unreleased
+
+*   Fundraisings: Neue Rollen für Förder:innen "Abzuklären", "Geplant" und "Zurückgestellt" (hitobito/hitobito_dsj#55)
+
 ## Version 2.7
 
 *   Neu können Fundraisings mit Förder:innen in hitobito erfasst und verwaltet werden (hitobito/hitobito_dsj#34)
