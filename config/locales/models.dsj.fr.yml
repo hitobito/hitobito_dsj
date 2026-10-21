@@ -144,6 +144,18 @@ fr:
         one: Angefragt
         many: Angefragte
         other: Angefragte
+      event/fundraising/role/to_clarify:
+        one: Abzuklären
+        many: Abzuklären
+        other: Abzuklären
+      event/fundraising/role/planned:
+        one: Geplant
+        many: Geplante
+        other: Geplante
+      event/fundraising/role/deferred:
+        one: Zurückgestellt
+        many: Zurückgestellte
+        other: Zurückgestellte
       event/fundraising/date:
         one: Projektzeitraum
         many: Projektzeiträume
